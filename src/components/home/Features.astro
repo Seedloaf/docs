@@ -1,0 +1,56 @@
+---
+const features = [
+  {
+    title: "Lightning fast",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    icon: "../../../icons/fast.png",
+  },
+  {
+    title: "Rich features",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    icon: "../../../icons/features.png",
+  },
+  {
+    title: "Optimized build",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    icon: "../../../icons/build.png",
+  },
+  {
+    title: "Flexible api",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    icon: "../../../icons/api.png",
+  },
+  {
+    title: "Multiple sdk's support",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    icon: "../../../icons/sdk.png",
+  },
+  {
+    title: "Error handling",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    icon: "../../../icons/error.png",
+  },
+];
+---
+
+<div
+  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 justify-items-center py-20 lg:py-28"
+>
+  {
+    features.map((features) => (
+      <div class="card max-w-2xl bg-gradient-to-t from-base-100 to-base-300/50 border border-base-content/20 hover:border-base-content/40 transition">
+        <div class="card-body font-outfit">
+          <div class="h-16 w-16 bg-base-300 rounded-full">
+            <img
+              class="w-20 h-16 p-4"
+              src={features.icon}
+              alt={features.title}
+            />
+          </div>
+          <h2 class="card-title">{features.title}</h2>
+          <p>{features.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

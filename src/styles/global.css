@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes:
+    winter --preferslight,
+    dark --default;
+}
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-outfit: "Outfit Variable", "sans-serif";
+}

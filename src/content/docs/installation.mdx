@@ -1,0 +1,48 @@
+---
+title: Installation
+description: "Quasi sapiente voluptates aut minima non doloribus similique quisquam. In quo expedita ipsum nostrum corrupti incidunt. Et aut eligendi ea perferendis."
+---
+
+## How to install
+
+Installation for npm
+
+<div class="max-w-sm md:max-w-2xl" >
+```bash
+npm i access-shield
+```
+</div>
+
+<div class="max-w-sm md:max-w-2xl" >
+Installation for yarn
+```bash
+yarn add access-shield
+```
+</div>
+
+## Usage
+
+Using Access Shield is straightforward. Here's a basic example of how to implement authentication in your application:
+
+<div class="max-w-sm md:max-w-2xl" >
+
+```jsx
+import { Auth } from 'access-shield';
+
+// Initialize the authentication instance
+const auth = new Auth();
+
+// Register a new user
+auth.register('username', 'password');
+
+// Log in an existing user
+auth.login('username', 'password');
+
+// Check if user is authenticated
+if (auth.isAuthenticated()) {
+  // User is authenticated, proceed with accessing secure resources
+} else {
+  // User is not authenticated, redirect to login page
+}
+```
+</div>
