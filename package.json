@@ -16,6 +16,8 @@
     "@docsearch/react": "^3.6.0",
     "@fontsource-variable/lexend": "^5.0.20",
     "@fontsource-variable/outfit": "^5.0.13",
+    "@fontsource/press-start-2p": "^5.2.6",
+    "@heroicons/react": "^2.2.0",
     "@tailwindcss/vite": "^4.0.9",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",

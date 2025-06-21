@@ -6,7 +6,7 @@ const ALGOLIA_DOCSEARCH_CONFIG = {
   appId: import.meta.env.VITE_ALGOLIA_APP_ID,
   apiKey: import.meta.env.VITE_ALGOLIA_API_KEY,
   indexName: import.meta.env.VITE_ALGOLIA_INDEX_NAME,
-}
+};
 ---
 
 <header class="sticky top-0 z-30">
@@ -27,26 +27,17 @@ const ALGOLIA_DOCSEARCH_CONFIG = {
             d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </label>
-      <DocSearchReact client:only="react" algoliaDocsearchConfig={ALGOLIA_DOCSEARCH_CONFIG} />
+      <DocSearchReact
+        client:only="react"
+        algoliaDocsearchConfig={ALGOLIA_DOCSEARCH_CONFIG}
+      />
     </div>
 
     <div class="navbar-end">
       <a
-        class="btn btn-sm btn-ghost"
-        href="https://www.x.com"
-        aria-label="twitter"
-      >
-        <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4"
-          ><path
-            d="M13.3174 10.7749L19.1457 4H17.7646L12.7039 9.88256L8.66193 4H4L10.1122 12.8955L4 20H5.38119L10.7254 13.7878L14.994 20H19.656L13.3171 10.7749H13.3174ZM11.4257 12.9738L10.8064 12.0881L5.87886 5.03974H8.00029L11.9769 10.728L12.5962 11.6137L17.7652 19.0075H15.6438L11.4257 12.9742V12.9738Z"
-            fill="currentColor"></path></svg
-        >
-      </a>
-
-      <a
-        class="btn btn-sm btn-ghost"
-        href="https://www.x.com"
-        aria-label="twitter"
+        class="btn btn-sm btn-ghost btn-square"
+        href="https://www.github.com"
+        aria-label="github"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

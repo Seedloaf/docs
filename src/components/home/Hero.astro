@@ -1,80 +1,62 @@
 ---
-import { CopyButton } from "../common/CopyButton";
+import {
+  AdjustmentsVerticalIcon,
+  ComputerDesktopIcon,
+  UserGroupIcon,
+} from "@heroicons/react/24/outline";
 ---
 
-<div class="hero">
+<div id="hero" class="hero min-h-screen py-24 lg:py-28">
   <div
-    class="absolute inset-x-0 top-50 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-    aria-hidden="true"
+    class="hero-content flex-col justify-between items-center text-center h-full max-w-(--breakpoint-md)"
   >
-    <div
-      class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[40rem] -translate-x-1/2 rotate-[70deg] bg-gradient-to-tr from-primary to-primary/50 opacity-15 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-      style={{
-        clipPath:
-          "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 150%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-      }}
-    >
-    </div>
-
-    <div
-      class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[40rem] -translate-x-1/2 rotate-[70deg] bg-gradient-to-tr from-primary to-primary/50 opacity-15 sm:left-[calc(100%)] sm:w-[72.1875rem]"
-      style={{
-        clipPath:
-          "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 150%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-      }}
-    >
-    </div>
-  </div>
-  <div class="hero-content text-center min-h-[40rem] font-outfit">
-    <div class="max-w-2xl md:max-w-6xl">
-      <a class="badge badge-outline badge-xs md:badge-lg mb-5 p-2 border-dashed border-base-content/40" href="/">
-        🎉 Access Shield new version 2.0 is live now ➔
-      </a>
-      <h1 class="text-4xl md:text-5xl lg:text-7xl">
-        Secure, simple, scalable
-        <br/>
-        <span class="text-primary font-bold">user management system</span>
-        
+    <div>
+      <h1 class="text-3xl sm:text-5xl md:text-7xl font-bold mb-5">
+        Minecraft Servers Made for the Casual Gamer -{" "}
+        <span class="text-primary">For Free.</span>
       </h1>
-      <div class="flex justify-center items-center">
-        <p class="py-7 max-w-4xl text-md md:text-xl lg:text-2xl">
-          Want a ultimate auth system for your application? Access Shield provides
-          flexible APIs, admin dashboard to authenticate and manage your users.
-        </p>
-      </div>
-      <div class="flex sm:flex-row flex-col justify-center items-center gap-5">
-        <a href="/documentation/gettingstarted">
-          <button
-            class="btn bg-base-content text-base-100 hover:bg-base-content/80"
-            >Get Started
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-            </svg>
-            
-            </button
-          >
-        </a>
+      <p class="text-md sm:text-lg md:mb-12 mb-6">
+        Launch your own Minecraft server in seconds. Enjoy the game with servers
+        that actually work.{" "}
+        <span class="text-primary">Entirely for free!</span>
+      </p>
+      <a
+        href={process.env.NEXT_PUBLIC_REGISTER_URL as string}
+        class="btn btn-primary btn-lg"
+      >
+        Play now
+      </a>
+    </div>
 
-          <div
-            class="flex items-center bg-base-300 rounded-lg shadow-sm justify-between"
-          >
-              <svg
-                width="22"
-                height="13"
-                viewBox="0 0 22 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="relative ml-4 mr-2 block w-3 -rotate-90"
-              >
-                <path d="M1 1L11 11L21 1" stroke="currentColor" stroke-Width="2"
-                ></path>
-              </svg>
-              <code class="flex-1 text-left leading-none mr-4">
-                npm i access-shield
-              </code>
-              <CopyButton client:only="react" />
+    <div>
+      <div class="stats hidden md:flex shadow-sm">
+        <div class="stat">
+          <div class="stat-figure text-primary">
+            <UserGroupIcon className="inline-block h-8 w-8 stroke-current" />
           </div>
+          <div class="stat-title text-start">Registered Users</div>
+          <div class="stat-value">40,000+</div>
+        </div>
 
+        <div class="stat">
+          <div class="stat-figure text-primary">
+            <AdjustmentsVerticalIcon
+              className="inline-block h-8 w-8 stroke-current"
+            />
+          </div>
+          <div class="stat-title text-start">Servers Created</div>
+          <div class="stat-value">50,000+</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-figure text-primary">
+            <ComputerDesktopIcon
+              className="inline-block h-8 w-8 stroke-current"
+            />
+          </div>
+          <div class="stat-title text-start">Free Hours Played</div>
+          <div class="stat-value">425,000+</div>
+        </div>
       </div>
     </div>
   </div>

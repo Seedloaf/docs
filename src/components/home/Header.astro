@@ -24,7 +24,11 @@ const pathname = new URL(Astro.request.url).pathname;
     class="navbar bg-base-100/80 border-b border-base-content/10 backdrop-blur-3xl justify-center items-center py-2 sm:px-0 md:px-20 font-outfit"
   >
     <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost btn-square lg:hidden">
+      <div
+        tabindex="0"
+        role="button"
+        class="btn btn-ghost btn-square lg:hidden"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-5 w-5"
@@ -57,13 +61,13 @@ const pathname = new URL(Astro.request.url).pathname;
       </ul>
     </div>
     <div class="navbar-start">
-      <a href="/" class="btn btn-ghost px-2">
-        <h1
-          class="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50"
-        >
-          Access Shield
-        </h1>
-      </a>
+      <div class="flex items-center">
+        <img src="/images/logo.webp" alt="Seedloaf" height={64} width={64} />
+        <h1 class="text-xl font-press-start-2p"><a href="/">Seedloaf</a></h1>
+        <span class="uppercase text-primary self-start text-xs font-bold mt-3">
+          Beta
+        </span>
+      </div>
     </div>
 
     <div class="navbar-center hidden lg:flex">
@@ -84,18 +88,6 @@ const pathname = new URL(Astro.request.url).pathname;
     </div>
 
     <div class="navbar-end">
-      <a
-        class="btn btn-sm btn-ghost btn-square"
-        href="https://www.x.com"
-        aria-label="twitter"
-      >
-        <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4"
-          ><path
-            d="M13.3174 10.7749L19.1457 4H17.7646L12.7039 9.88256L8.66193 4H4L10.1122 12.8955L4 20H5.38119L10.7254 13.7878L14.994 20H19.656L13.3171 10.7749H13.3174ZM11.4257 12.9738L10.8064 12.0881L5.87886 5.03974H8.00029L11.9769 10.728L12.5962 11.6137L17.7652 19.0075H15.6438L11.4257 12.9742V12.9738Z"
-            fill="currentColor"></path></svg
-        >
-      </a>
-
       <a
         class="btn btn-sm btn-ghost btn-square"
         href="https://www.github.com"

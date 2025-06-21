@@ -1,12 +1,11 @@
----
+const getNitro = () => {
+  return window["nitroAds" as any] as any;
+};
 
----
-
-<div id="ntr-docs-skyscraper"></div>
-<script>
-  window["nitroAds"].createAd("ntr-docs-skyscraper", {
+const addMenuAd = (id: string) => {
+  getNitro().createAd(id, {
     refreshTime: 30,
-    demo: process.env.NODE_ENV === "development",
+    demo: process.env.NODE_ENV !== "production",
     sizes: [
       ["300", "250"],
       ["336", "280"],
@@ -23,4 +22,4 @@
       position: "top-right",
     },
   });
-</script>
+};

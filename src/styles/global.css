@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "@fontsource/press-start-2p";
+
 @plugin "daisyui" {
   themes:
     winter --preferslight,
@@ -8,4 +10,5 @@
 
 @theme {
   --font-outfit: "Outfit Variable", "sans-serif";
+  --font-press-start-2p: "Press Start 2P";
 }

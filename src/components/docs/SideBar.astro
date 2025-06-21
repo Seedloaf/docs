@@ -11,14 +11,13 @@ const pathname = new URL(Astro.request.url).pathname;
     <div
       class="bg-base-100 sticky top-0 z-20 items-center gap-2 bg-opacity-90 px-4 py-2 backdrop-blur lg:flex font-outfit"
     >
-      <a href="/" class="btn btn-ghost px-2">
-        <h1
-          class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50"
-        >
-          Access Shield{" "}
-          <span class="text-sm text-base-content opacity-50">docs</span>
-        </h1>
-      </a>
+      <div class="flex items-center">
+        <img src="/images/logo.webp" alt="Seedloaf" height={64} width={64} />
+        <h1 class="text-xl font-press-start-2p"><a href="/">Seedloaf</a></h1>
+        <span class="uppercase text-primary self-start text-xs font-bold mt-3">
+          Beta
+        </span>
+      </div>
     </div>
 
     <ul class="menu w-full px-4 py-0 font-outfit">
@@ -36,9 +35,6 @@ const pathname = new URL(Astro.request.url).pathname;
                     class={`hover:text-primary hover:bg-primary/5 transition flex ${pathname === navItem.href ? "text-primary bg-primary/5" : ""}`}
                   >
                     {navItem.title}
-                    {navItem.label && (
-                      <div class="badge badge-primary badge-sm">New</div>
-                    )}
                   </a>
                 </li>
               ))}

@@ -1,61 +1,34 @@
 const SIDEBAR = [
   {
-    title: "Introduction",
+    title: "About Seedloaf",
     items: [
       {
-        title: "Getting Started",
-        href: "/documentation/gettingstarted",
-      },
-      {
-        title: "Installation",
-        href: "/documentation/installation",
-      },
-      {
-        title: "Quickstart",
-        href: "/documentation/quickstart",
+        title: "Who we are",
+        href: "/documentation/who-we-are",
       },
     ],
   },
-
   {
     title: "Guides",
     items: [
       {
-        title: "SDKs",
-        href: "/documentation/sdks",
-      },
-      {
-        title: "Authentication",
+        title: "My server stops after I click start",
         href: "/documentation/authentication",
-      },
-      {
-        title: "Error Handling",
-        href: "/documentation/errorhandling",
-      },
-      {
-        title: "Hooks",
-        href: "/documentation/hooks",
-        label: true,
       },
     ],
   },
-
   {
-    title: "Contribute",
+    title: "Frequently Asked Questions",
     items: [
       {
-        title: "How to contribute",
-        href: "/documentation/how-to-contribute",
-      },
-      {
-        title: "Contributing guideline",
-        href: "/documentation/contributing-guideline",
-      },
-      {
-        title: "Having an issue",
-        href: "/documentation/having-an-issue",
+        title: "My server stops after I click start",
+        href: "/documentation/authentication",
       },
     ],
+  },
+  {
+    title: "Switching from another host",
+    items: [],
   },
 ];
 

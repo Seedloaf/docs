@@ -19,7 +19,25 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{title} | Seedloaf</title>
+    <script is:inline data-cfasync="false">
+      window.nitroAds = window.nitroAds || {
+        createAd: function () {
+          return new Promise((e) => {
+            window.nitroAds.queue.push(["createAd", arguments, e]);
+          });
+        },
+        addUserToken: function () {
+          window.nitroAds.queue.push(["addUserToken", arguments]);
+        },
+        queue: [],
+      };
+    </script>
+    <script
+      is:inline
+      data-cfasync="false"
+      async
+      src="https://s.nitropay.com/ads-2142.js"></script>
   </head>
   <body>
     <div class="drawer lg:drawer-open">

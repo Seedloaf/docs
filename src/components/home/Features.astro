@@ -1,56 +1,72 @@
 ---
+import {
+  ArrowPathIcon,
+  BoltIcon,
+  Cog6ToothIcon,
+  CubeIcon,
+  CurrencyEuroIcon,
+  LinkIcon,
+} from "@heroicons/react/24/outline";
+
 const features = [
   {
-    title: "Lightning fast",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: "../../../icons/fast.png",
+    Icon: BoltIcon,
+    title: "Performant Servers",
+    description:
+      "Free Minecraft servers that actually work. All registered users get powerful CPUs with plenty of RAM.",
+    highlight: "Enjoy servers that actually work.",
   },
   {
-    title: "Rich features",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: "../../../icons/features.png",
+    Icon: CurrencyEuroIcon,
+    title: "Entirely Free",
+    description:
+      "Seedloaf is completely free. Try out a world without registering. Sign up for bigger worlds and more features.",
+    highlight: "All for free!",
   },
   {
-    title: "Optimized build",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: "../../../icons/build.png",
+    Icon: Cog6ToothIcon,
+    title: "Custom Control Plane",
+    description:
+      "Manage your server with our custom control plane. Easily manage your server with a few clicks.",
+    highlight: "No more clunky dashboards.",
   },
   {
-    title: "Flexible api",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: "../../../icons/api.png",
+    Icon: LinkIcon,
+    title: "Automatic Subdomains",
+    description:
+      "Easily share your world with friends, using your custom sdlf.fun domain.",
+    highlight: "Personalise your server.",
   },
   {
-    title: "Multiple sdk's support",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: "../../../icons/sdk.png",
+    Icon: ArrowPathIcon,
+    title: "Quick Startup Time",
+    description:
+      "Start your server in seconds. No more waiting for your server to start.",
+    highlight: "Get gaming faster.",
   },
   {
-    title: "Error handling",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: "../../../icons/error.png",
+    Icon: CubeIcon,
+    title: "Modpacks and Plugins",
+    description:
+      "Select different server types and install custom modpacks and plugins.",
+    highlight: "Choose your own experience.",
   },
 ];
 ---
 
-<div
-  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 justify-items-center py-20 lg:py-28"
->
-  {
-    features.map((features) => (
-      <div class="card max-w-2xl bg-gradient-to-t from-base-100 to-base-300/50 border border-base-content/20 hover:border-base-content/40 transition">
-        <div class="card-body font-outfit">
-          <div class="h-16 w-16 bg-base-300 rounded-full">
-            <img
-              class="w-20 h-16 p-4"
-              src={features.icon}
-              alt={features.title}
-            />
+<div>
+  <h2 class="text-3xl font-bold">Why Seedloaf?</h2>
+  <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+    {
+      features.map(({ Icon, title, description }) => (
+        <div class="relative border border-primary rounded-md px-8 py-6">
+          <div class="p-1 rounded-full absolute left-4 -top-5 bg-base-100 text-primary flex items-center gap-2">
+            <Icon className="h-6 w-6" />
+            <h3 class="text-lg font-semibold">{title}</h3>
           </div>
-          <h2 class="card-title">{features.title}</h2>
-          <p>{features.description}</p>
+          {description}
         </div>
-      </div>
-    ))
-  }
+      ))
+    }
+  </div>
 </div>
