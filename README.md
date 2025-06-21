@@ -1,20 +1,4 @@
-# Documentation Template
-
-Thank you for purchasing this template. I hope you build something great with it!
-
-## Features
-
-- Made with Astro, Markdown, Tailwind CSS and daisyUI
-- Search functionality
-- SEO friendly, Lightweight and fast
-- Dark mode and Light mode
-
-## Including
-
-- Homepage with features sections, code demo, contributors images, testimonials and installation guide
-- Document pages made from Markdown files with Sidebar, page content links, sponsors section
-- Search bar using Algolia DocSearch
-- Theme switch button with dark theme and light theme (compatible with all daisyUI themes)
+# Seedloaf Documentation
 
 ## Getting Started
 
