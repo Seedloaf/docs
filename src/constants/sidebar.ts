@@ -10,21 +10,11 @@ const SIDEBAR = [
   },
   {
     title: "Guides",
-    items: [
-      {
-        title: "My server stops after I click start",
-        href: "/documentation/authentication",
-      },
-    ],
+    items: [],
   },
   {
     title: "Frequently Asked Questions",
-    items: [
-      {
-        title: "My server stops after I click start",
-        href: "/documentation/authentication",
-      },
-    ],
+    items: [],
   },
   {
     title: "Switching from another host",

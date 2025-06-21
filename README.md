@@ -48,7 +48,3 @@ VITE_ALGOLIA_APP_ID=XXXXXXXXXX
 VITE_ALGOLIA_API_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 VITE_ALGOLIA_INDEX_NAME=xxxxxxxx
 ```
-
-## Icons credit
-
-[Credit: Icons from Flat Icons](https://www.flaticon.com/free-icons)
