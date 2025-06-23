@@ -6,6 +6,19 @@ const SIDEBAR = [
         title: "Who we are",
         href: "/documentation/who-we-are",
       },
+      {
+        title: "How do we make money?",
+        href: "/documentation/how-do-we-make-money",
+      },
+    ],
+  },
+  {
+    title: "Minecraft",
+    items: [
+      {
+        title: "How do I play Minecraft with friends?",
+        href: "/documentation/how-to-play-minecraft-with-friends",
+      },
     ],
   },
   {
