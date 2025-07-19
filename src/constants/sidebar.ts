@@ -1,6 +1,6 @@
 const SIDEBAR = [
   {
-    title: "About Seedloaf",
+    title: "Seedloaf",
     items: [
       {
         title: "Who we are",
@@ -9,6 +9,10 @@ const SIDEBAR = [
       {
         title: "How do we make money?",
         href: "/documentation/how-do-we-make-money",
+      },
+      {
+        title: "Frequently Asked Questions",
+        href: "/documentation/frequently-asked-questions",
       },
     ],
   },
@@ -23,14 +27,19 @@ const SIDEBAR = [
   },
   {
     title: "Guides",
-    items: [],
+    items: [
+      {
+        title: "Installing mods/plugins",
+        href: "/documentation/installing-mods-or-plugins",
+      },
+      {
+        title: "Install Geyser",
+        href: "/documentation/installing-geyser",
+      },
+    ],
   },
   {
-    title: "Frequently Asked Questions",
-    items: [],
-  },
-  {
-    title: "Switching from another host",
+    title: "Changing host",
     items: [],
   },
 ];
