@@ -38,10 +38,6 @@ const SIDEBAR = [
       },
     ],
   },
-  {
-    title: "Changing host",
-    items: [],
-  },
 ];
 
 export default SIDEBAR;
