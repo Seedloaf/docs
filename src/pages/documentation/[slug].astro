@@ -1,8 +1,8 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
-import Layout from "../layouts/Layout.astro";
-import Toc from "../components/docs/Toc.astro";
-import Pagination from "../components/docs/Pagination.astro";
+import Layout from "../../layouts/Layout.astro";
+import Toc from "../../components/docs/Toc.astro";
+import Pagination from "../../components/docs/Pagination.astro";
 
 export const getStaticPaths = async () => {
   const docs = await getCollection("docs");
