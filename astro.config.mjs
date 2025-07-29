@@ -5,7 +5,6 @@ import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  base: '/documentation',
   integrations: [mdx(), react()],
   trailingSlash: "never",
 
