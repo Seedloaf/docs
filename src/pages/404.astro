@@ -1,2 +1,32 @@
-<h1>Oh no!</h1>
-<a href="/documentation/who-we-are">Back to safety</a>
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title={"Lost in the nether"}>
+  <div class="flex p-5 md:p-10 md:pt-10 xl:gap-20 font-outfit">
+    <article class="flex flex-col max-w-3xl">
+      <div class="text-sm breadcrumbs pt-0 pb-4">
+        <ul>
+          <li>
+            <a href="/documentation/who-we-are" class="hover:text-primary"
+              >Home</a
+            >
+          </li>
+        </ul>
+      </div>
+      <section class="prose md:prose-md mb-10 max-w-none">
+        <div>
+          <h1>You look a little lost</h1>
+          <p>
+            <a
+              href="/documentation/who-we-are"
+              class={`hover:text-primary hover:bg-primary/5 transition underline`}
+            >
+              Get back to safety
+            </a>
+          </p>
+        </div>
+      </section>
+    </article>
+  </div>
+</Layout>
