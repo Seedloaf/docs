@@ -1,18 +1,20 @@
+const documentationPath = "/documentation";
+
 const SIDEBAR = [
   {
     title: "Seedloaf",
     items: [
       {
-        title: "Who we are",
-        href: "/documentation/who-we-are",
+        title: "Who are we?",
+        href: documentationPath + "/who-we-are",
       },
       {
         title: "How do we make money?",
-        href: "/documentation/how-do-we-make-money",
+        href: documentationPath + "/how-do-we-make-money",
       },
       {
         title: "Frequently Asked Questions",
-        href: "/documentation/frequently-asked-questions",
+        href: documentationPath + "/frequently-asked-questions",
       },
     ],
   },
@@ -21,7 +23,7 @@ const SIDEBAR = [
     items: [
       {
         title: "How do I play Minecraft with friends?",
-        href: "/documentation/how-to-play-minecraft-with-friends",
+        href: documentationPath + "/how-to-play-minecraft-with-friends",
       },
     ],
   },
@@ -30,11 +32,11 @@ const SIDEBAR = [
     items: [
       {
         title: "Installing mods/plugins",
-        href: "/documentation/installing-mods-or-plugins",
+        href: documentationPath + "/installing-mods-or-plugins",
       },
       {
         title: "Install Geyser",
-        href: "/documentation/installing-geyser",
+        href: documentationPath + "/installing-geyser",
       },
     ],
   },
