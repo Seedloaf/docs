@@ -16,6 +16,14 @@ const SIDEBAR = [
         title: "Frequently Asked Questions",
         href: documentationPath + "/frequently-asked-questions",
       },
+      {
+        title: "Common Issues",
+        href: documentationPath + "/common-issues",
+      },
+      {
+        title: "How do I update server properties?",
+        href: documentationPath + "/server-properties",
+      },
     ],
   },
   {
