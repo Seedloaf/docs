@@ -24,6 +24,10 @@ const SIDEBAR = [
         title: "How do I update server properties?",
         href: documentationPath + "/server-properties",
       },
+      {
+        title: "Uploading a custom world",
+        href: documentationPath + "/custom-world-upload",
+      },
     ],
   },
   {
@@ -45,6 +49,15 @@ const SIDEBAR = [
       {
         title: "Install Geyser",
         href: documentationPath + "/installing-geyser",
+      },
+    ],
+  },
+    {
+    title: "Other",
+    items: [
+      {
+        title: "Contributors",
+        href: documentationPath + "/contributors",
       },
     ],
   },

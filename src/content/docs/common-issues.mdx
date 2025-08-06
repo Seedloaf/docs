@@ -8,3 +8,20 @@ The most common issue when uploading a custom world is that **the custom
 world may have a modified name**. To fix this, update the level-name property 
 inside server.properties in File Manager to be the correct name (instead of the 
 default 'world').
+
+- **My Server doesn't start after installing mods**<br />
+There are two major causes for this:<br />
+    1. **Mod incompatibilities:**<br />
+    Each version of Minecraft has specific code structures and APIs. A mod built for one version may 
+    not work on another. Even if a *single* mod is made for a different version than what your server 
+    is running, it may prevent the **entire** server from starting.<br /> 
+    **To fix this:** double check that all mod's versions match the exact version of minecraft your server 
+    is running and that they are meant to work with the same mod loader.<br />
+    1. **Missing dependencies**<br />
+    Certain mods depend on other specific mods or libraries to function and Missing Dependencies errors 
+    occur when those supporting files haven’t been installed on your server. 
+    **To fix this:** Check your logs in World Logs after a crash. It will say something along the lines of 
+    *missing dependencies* with the name of the missing dependency.
+
+    If you're unable to pinpoint the cause you can try research your error online, post it to an AI chatbot, 
+    or you can create a ticket on [our Discord](https://seedloaf.com/discord).
