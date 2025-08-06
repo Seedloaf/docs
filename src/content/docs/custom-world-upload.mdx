@@ -1,0 +1,22 @@
+---
+title: Uploading a Custom World
+description: A step-by-step guide on how to upload a custom Minecraft world to Seedloaf.
+---
+
+Start off by renaming your new world folder to `world`. Alternatively, you can change the 'level' 
+property of the server in server.properties inside the **File Manager** to match the name of your 
+custom world.<br />
+
+If you intend to install datapacks on the server, you'll need to upload them to world\datapacks 
+(create the folder if you don't see it). Each datapack must be in it's own folder.<br />
+
+The easiest way to do this is this; right-click on the folder (on your computer) > *send to* > 
+*compressed (zipped) folder*. You can use any other [third party zipping tool](https://7-zip.org/download.html) to do this as well. 
+Once you have the zip file, go to your [Seedloaf's server dashboard](https://seedloaf.com/dashboard) > 
+Manage World > World & Backups > Upload Custom World. Select the newly made zipped file and upload it. 
+Give it a few minutes to upload, restart the server and you'll have a fresh new world!
+
+Seedloaf has a maximum set amount of storage of 6GB, thus before you start uploading, ensure the world file 
+is less than 6 gigabytes. If it's more than 6GB, you can use [MCA selector](https://github.com/Querz/mcaselector) 
+to trim off unused chunks. *Players inventories will not be affected by this change, although they will be 
+teleported to the spawn point of the new world.*
