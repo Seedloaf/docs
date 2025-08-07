@@ -47,8 +47,12 @@ const SIDEBAR = [
         href: documentationPath + "/installing-mods-or-plugins",
       },
       {
-        title: "Install Geyser",
+        title: "Installing Geyser",
         href: documentationPath + "/installing-geyser",
+      },
+      {
+        title: "Installing Simple Voice Chat",
+        href: documentationPath + "/simple-voice-chat",
       },
     ],
   },
