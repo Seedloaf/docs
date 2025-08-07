@@ -1,5 +1,9 @@
 FROM node:lts AS build
 
+ARG VITE_ALGOLIA_API_KEY
+ARG VITE_ALGOLIA_APP_ID
+ARG VITE_ALGOLIA_INDEX_NAME
+
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
