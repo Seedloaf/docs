@@ -47,6 +47,10 @@ const SIDEBAR = [
         href: documentationPath + "/installing-mods-or-plugins",
       },
       {
+        title: "Installing datapacks",
+        href: documentationPath + "/installing-datapacks",
+      },
+      {
         title: "Installing Geyser",
         href: documentationPath + "/installing-geyser",
       },
@@ -56,7 +60,7 @@ const SIDEBAR = [
       },
     ],
   },
-    {
+  {
     title: "Other",
     items: [
       {
