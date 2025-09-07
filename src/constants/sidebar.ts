@@ -16,6 +16,11 @@ const SIDEBAR = [
         title: "Frequently Asked Questions",
         href: documentationPath + "/frequently-asked-questions",
       },
+    ],
+  },
+  {
+    title: "Server",
+    items: [
       {
         title: "Common Issues",
         href: documentationPath + "/common-issues",
@@ -27,15 +32,6 @@ const SIDEBAR = [
       {
         title: "Uploading a custom world",
         href: documentationPath + "/custom-world-upload",
-      },
-    ],
-  },
-  {
-    title: "Minecraft",
-    items: [
-      {
-        title: "How do I play Minecraft with friends?",
-        href: documentationPath + "/how-to-play-minecraft-with-friends",
       },
     ],
   },
@@ -63,6 +59,10 @@ const SIDEBAR = [
   {
     title: "Other",
     items: [
+      {
+        title: "How do I play Minecraft with friends?",
+        href: documentationPath + "/how-to-play-minecraft-with-friends",
+      },
       {
         title: "Contributors",
         href: documentationPath + "/contributors",
