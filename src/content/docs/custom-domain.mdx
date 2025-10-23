@@ -1,0 +1,22 @@
+---
+title: Using a custom domain
+description: A dead simple guide on how to set up a custom domain.
+---
+
+<div class="alert">
+  <strong>Warning!</strong>
+  <b>This guide is meant for tech-savvy users and uses many special terms.</b>
+</div>
+
+---
+
+## Grabbing your secondary address
+
+First of all, go to your server's "Dashboard" tab on the Seedloaf website, and copy your **secondary** domain. It should look like **"nsXYZXYZ.seedloaf.com"**, where 'X', 'Y', and 'Z' are numbers.
+
+## Setting up DNS records
+You then want to use something like **Cloudflare** (which I will use in this guide, but really any DNS host will work) to manage your DNS records. Following that, create a single **"AAAA"** record (at your preferred location address) and point it to your secondary Seedloaf domain we grabbed before in step 1.
+
+After doing so, your setup should look like the screenshot attached below.
+
+<img src="https://files.catbox.moe/4lftnd.png" alt="Image" width="100%" />
