@@ -54,6 +54,10 @@ const SIDEBAR = [
         title: "Installing Simple Voice Chat",
         href: documentationPath + "/simple-voice-chat",
       },
+      {
+        title: "Using custom domains",
+        href: documentationPath + "/custom-domain",
+      },
     ],
   },
   {
