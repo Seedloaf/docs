@@ -10,13 +10,19 @@ description: A dead simple guide on how to set up a custom domain.
 
 ---
 
-## Grabbing your secondary address
+## Grabbing your address
 
-First of all, go to your server's "Dashboard" tab on the Seedloaf website, and copy your **secondary** domain. It should look like **"nsXYZXYZ.seedloaf.com"**, where 'X', 'Y', and 'Z' are numbers.
+If you want to change the address Bedrock players connect at, you will need to use your server **secondary address**; otherwise, to just modify where Java players connect at, use the **primary address**.
 
-## Setting up DNS records
-You then want to use something like **Cloudflare** (which I will use in this guide, but really any DNS host will work) to manage your DNS records. Following that, create a single **"AAAA"** record (at your preferred location address) and point it to your secondary Seedloaf domain we grabbed before in step 1.
+First of all, go to your server's "Dashboard" tab on the Seedloaf website, and copy your **primary/secondary** adress. It should look like **"nsXYZXYZ.seedloaf.com"** or **example.sdlf.fun**, where 'X', 'Y', and 'Z' are numbers.
+
+## Setting up DNS Records
+
+After choosing your own domain, you’ll need to register it with a DNS host.
+Next, use a service like **Cloudflare** (which I’ll use in this guide though any DNS host will work) to manage your DNS records.
+Once set up, create a single **“AAAA”** record (at your preferred location or address) and point it to the Seedloaf domain you obtained earlier in Step 1.
 
 After doing so, your setup should look like the screenshot attached below.
 
-<img src="https://files.catbox.moe/4lftnd.png" alt="Image" width="100%" />
+<!-- SOMEONE REPLACE THIS WITH AN ACTUAL IMAGE URL THAT ISN'T FROM DISCORD -->
+<img src="https://cdn.discordapp.com/attachments/1424811660534747262/1431264189611114526/image.png?ex=68fcc826&is=68fb76a6&hm=e24a543e41762b8d84cafdaca7087c0f7faada40f36fb19f3a09d7a2794fa29f&g" alt="Image" width="100%" />
