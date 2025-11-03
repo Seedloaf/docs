@@ -12,25 +12,25 @@ const SIDEBAR = [
         title: "How do we make money?",
         href: documentationPath + "/how-do-we-make-money",
       },
-      {
-        title: "Frequently Asked Questions",
-        href: documentationPath + "/frequently-asked-questions",
-      },
     ],
   },
   {
     title: "Server",
     items: [
       {
+        title: "Frequently Asked Questions",
+        href: documentationPath + "/frequently-asked-questions",
+      },
+      {
         title: "Common Issues",
         href: documentationPath + "/common-issues",
       },
       {
-        title: "How do I update server properties?",
+        title: "Different Server Properties",
         href: documentationPath + "/server-properties",
       },
       {
-        title: "Uploading a custom world",
+        title: "Uploading Custom Worlds",
         href: documentationPath + "/custom-world-upload",
       },
     ],
@@ -39,11 +39,11 @@ const SIDEBAR = [
     title: "Guides",
     items: [
       {
-        title: "Installing mods/plugins",
+        title: "Installing Mods/Plugins",
         href: documentationPath + "/installing-mods-or-plugins",
       },
       {
-        title: "Installing datapacks",
+        title: "Installing Datapacks",
         href: documentationPath + "/installing-datapacks",
       },
       {
@@ -54,14 +54,18 @@ const SIDEBAR = [
         title: "Installing Simple Voice Chat",
         href: documentationPath + "/simple-voice-chat",
       },
+      {
+        title: "Changing Server Thumbnail",
+        href: documentationPath + "/changing-server-thumbnail",
+      }
     ],
   },
   {
     title: "Other",
     items: [
       {
-        title: "How do I play Minecraft with friends?",
-        href: documentationPath + "/how-to-play-minecraft-with-friends",
+        title: "Other Hosting Methods",
+        href: documentationPath + "/other-hosting-methods",
       },
       {
         title: "Contributors",
