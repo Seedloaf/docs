@@ -5,11 +5,11 @@ const SIDEBAR = [
     title: "Seedloaf",
     items: [
       {
-        title: "Who are we?",
+        title: "Who we are",
         href: documentationPath + "/who-we-are",
       },
       {
-        title: "How do we make money?",
+        title: "How we make money",
         href: documentationPath + "/how-do-we-make-money",
       },
       {
@@ -26,13 +26,26 @@ const SIDEBAR = [
         href: documentationPath + "/common-issues",
       },
       {
-        title: "How do I update server properties?",
+        title: "Different Server Properties",
         href: documentationPath + "/server-properties",
       },
       {
         title: "Uploading a custom world",
         href: documentationPath + "/custom-world-upload",
       },
+    ],
+  },
+  {
+    title: "Learn Seedloaf",
+    items: [
+      {
+        title: "Create your first world",
+        href: documentationPath + "/create-first-world",
+      },
+      {
+        title: "Understand the Tabs",
+        href: documentationPath + "/understand-tabs"
+      }
     ],
   },
   {

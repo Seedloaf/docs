@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title={"Lost in the nether"}>
+<Layout title={"404"}>
   <div class="flex p-5 md:p-10 md:pt-10 xl:gap-20 font-outfit">
     <article class="flex flex-col max-w-3xl">
       <div class="text-sm breadcrumbs pt-0 pb-4">
@@ -16,15 +16,9 @@ import Layout from "../layouts/Layout.astro";
       </div>
       <section class="prose md:prose-md mb-10 max-w-none">
         <div>
-          <h1>You look a little lost.</h1>
-          <p>
-            <a
-              href="/documentation/who-we-are"
-              class={`hover:text-primary hover:bg-primary/5 transition underline`}
-            >
-              Get back to safety
-            </a>
-          </p>
+          <h1>Uh-oh!</h1>
+          <p>The article you are trying to find doesn't seem to exist. Let's return you back to safety.</p>
+          <a href="/documentation/who-we-are" class="btn btn-primary">Return</a>
         </div>
       </section>
     </article>
