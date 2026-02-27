@@ -6,7 +6,7 @@ description: Geyser allows users on Bedrock to play on the same server as Java E
 ### Watch this 1 minute video to get set up
 
 <iframe
-  src="https://player.mux.com/mi02W6Lk01Owd02pXZdjUrdlNnX00pZ700m401YTH00j029aUCY?metadata-video-title=geyser_recording&accent-color=%23605dff"
+  src="https://player.mux.com/Ix4VorgJJEbUWau01mIQNy7djyb4B02QHmj01yuSB9STtc?metadata-video-title=Geyser-Setup&video-title=Geyser-Setup"
   style="width: 100%; border: none; aspect-ratio: 83/54;"
   allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
   allowfullscreen
@@ -24,15 +24,22 @@ There are generally 3 plugins you should install:
 
 1. The Geyser plugin itself - this is what actually allows Bedrock players to connect.
 1. Floodgate - this allows Bedrock users to connect without requiring a Java Edition account.
-1. *(Optional)* ViaVersion - this allows clients with newer versions to connect to your server.
-While this is optional, it is *highly* recommended.
+1. ViaVersion - this allows clients with newer versions to connect to your server.
 
 To download Geyser and Floodgate, [visit this page](https://geysermc.org/download)
-and download the correct versions.
-
+and download the correct versions.<br>
 To download ViaVersion, [visit this page](https://viaversion.com/) and select "ViaVersion"
 
-### Step 3: Exposing the correct port
+Once you have downloaded the plugins, upload them to the "plugins" file on your dashboard than start the server so the plugins can be loaded!
+
+### Step 3: Configuring the plugin and server
+
+1. Find geyser's <code>config.yml</code> and change "auth-type" to <code>"floodgate"</code> - This allows bedrock players to join properly.
+1. Next, find your <code>server.properties</code> file and change "enforce-secure-profile" to <code>false</code>
+
+Save your changes and start your server again for the edits to come into effect.
+
+### Step 4: Exposing the correct port
 
 On your Seedloaf Dashboard, click on Manage World and then go to the "Additional Ports" tab.
 
@@ -40,6 +47,6 @@ Once there expose port 19132. Once that is saved, you should see some text sayin
 <code>"Port 19132 is exposed on nsXYZ.seedloaf.com:YOUR_PORT"</code>. To connect with Bedrock
 you use that address and port!
 
-### Step 4: Have fun
+### Step 5: Have fun
 
 Your server should now be ready to accept Bedrock players - enjoy!
