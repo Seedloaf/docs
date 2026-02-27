@@ -45,6 +45,10 @@ const SIDEBAR = [
       {
         title: "Understand the Tabs",
         href: documentationPath + "/understand-tabs"
+      },
+      {
+        title: "Add Users to Server",
+        href: documentationPath + "/add-users"
       }
     ],
   },
