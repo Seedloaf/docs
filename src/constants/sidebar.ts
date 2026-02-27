@@ -26,7 +26,7 @@ const SIDEBAR = [
         href: documentationPath + "/common-issues",
       },
       {
-        title: "Different Server Properties",
+        title: "Server Properties",
         href: documentationPath + "/server-properties",
       },
       {
