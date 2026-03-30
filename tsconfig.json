@@ -1,9 +1,6 @@
 {
   "compilerOptions": {
-    "jsx": "react",
-    "baseUrl": ".",
-    "paths": {},
-    "esModuleInterop": true
+    "jsx": "react"
   },
-  "include": ["src", "src/content", "types"]
+  "extends": "astro/tsconfigs/base"
 }
