@@ -1,5 +1,6 @@
 ---
 import ThemeToggle from "../common/ThemeToggle.astro";
+import TranslateToggle from "../common/TranslateToggle.astro";
 
 const navigation = [
   {
@@ -103,6 +104,7 @@ const pathname = new URL(Astro.request.url).pathname;
             fill="currentColor"></path>
         </svg>
       </a>
+      <TranslateToggle client:load />
       <ThemeToggle />
     </div>
   </nav>

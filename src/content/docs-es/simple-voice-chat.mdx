@@ -1,0 +1,38 @@
+---
+title: Configuración de Simple Voice Chat
+description: Una guía breve sobre cómo configurar Simple Voice Chat en Seedloaf.
+---
+
+### Mira este video de 1 minuto para realizar la configuración
+
+<iframe
+src="https://player.mux.com/oyE4z6hdOV1zQ601BNvb4M7MjK8BJgtdG00L00F8xjCvHA?metadata-video-title=geyser_recording&accent-color=%23605dff"
+style="width: 100%; border: none; aspect-ratio: 83/54;" 
+allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" 
+allowfullscreen
+></iframe>
+
+### O sigue esta guía paso a paso
+
+1. Primero, necesitarás [descargar Simple Voice Chat](https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat)
+desde un sitio de mods como CurseForge o Modrinth. Descarga la versión que coincida con el cargador de mods
+que tengas intención de utilizar en Seedloaf.
+
+2. Luego, toma el archivo *voicechat.jar* descargado y súbelo al directorio /plugins o /mods de tu mundo
+dentro de la pestaña **File Manager** (Gestor de archivos), dependiendo del cargador de mods que estés utilizando. Forge, NeoForge, Quilt y Fabric
+usan la carpeta /mods, mientras que Paper usa la carpeta /plugins.
+
+3. Inicia tu mundo.
+
+4. Dirígete a la pestaña **Additional Ports** (Puertos adicionales) y añade el puerto 24454.
+
+5. Copia el puerto de Seedloaf a través del cual tu puerto activo está expuesto ahora. Debería verse algo así:
+`ns827314.seedloaf.com:49901`.
+
+6. Detén tu mundo.
+
+7. De vuelta en el **File Manager**, deberías ver una carpeta /voicechat generada dentro de tu carpeta /plugins o /mods.
+Ábrela y, a continuación, abre `voicechat-server.properties`. Desplázate hacia abajo hasta que veas la propiedad `voice_host`. Pega el puerto de Seedloaf que copiaste para que `voice_host` quede configurado con el nuevo puerto. Debería verse algo
+así: `voice_host = ns827314.seedloaf.com:49901`.
+
+8. ¡Listo! Inicia tu mundo y Simple Voice Chat debería funcionar correctamente.

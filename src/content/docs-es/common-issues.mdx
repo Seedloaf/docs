@@ -1,0 +1,24 @@
+---
+title: Problemas Comunes
+description: Una lista de errores frecuentes causados por configuraciones incorrectas del usuario o problemas conocidos en Seedloaf.
+---
+
+- **La subida del mundo personalizado no funciona** <br />
+El problema más habitual al subir un mundo personalizado es que **el mundo puede tener un nombre diferente al esperado**. Para solucionarlo, actualiza la propiedad level-name dentro de server.properties en el Administrador de Archivos para que coincida con el nombre correcto (en lugar del valor predeterminado 'world').
+
+- **Mi servidor no arranca después de instalar mods**<br />
+Existen dos causas principales para esto:<br />
+    1. **Incompatibilidades entre mods:**<br />
+    Cada versión de Minecraft tiene su propia estructura de código y APIs particulares. Un mod creado para una versión puede
+    no funcionar en otra. Incluso si un *único* mod está diseñado para una versión distinta a la que ejecuta tu servidor,
+    puede impedir que el servidor **entero** arranque.<br />
+    **Para solucionarlo:** verifica que las versiones de todos tus mods coincidan exactamente con la versión de Minecraft que está
+    ejecutando tu servidor, y que estén pensados para funcionar con el mismo cargador de mods.<br />
+    1. **Dependencias faltantes**<br />
+    Ciertos mods requieren otros mods o bibliotecas específicas para funcionar correctamente. Los errores de dependencias faltantes
+    aparecen cuando esos archivos de soporte no están instalados en tu servidor.
+    **Para solucionarlo:** revisa tus registros en Registros del Mundo tras un fallo. Verás algo similar a
+    *missing dependencies* junto al nombre de la dependencia ausente.
+
+    Si no logras identificar la causa, puedes intentar buscar el error en línea, consultarlo con un chatbot de IA,
+    o abrir un ticket en [nuestro Discord](https://seedloaf.com/discord).

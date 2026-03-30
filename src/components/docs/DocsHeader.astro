@@ -1,5 +1,6 @@
 ---
 import ThemeToggle from "../common/ThemeToggle.astro";
+import TranslateToggle from "../common/TranslateToggle.astro";
 import DocSearchReact from "./DocSearch";
 const ALGOLIA_DOCSEARCH_CONFIG = {
   container: "#docsearch",
@@ -48,6 +49,7 @@ const ALGOLIA_DOCSEARCH_CONFIG = {
             fill="currentColor"></path>
         </svg>
       </a>
+      <TranslateToggle client:load />
       <ThemeToggle />
     </div>
   </nav>

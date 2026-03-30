@@ -1,0 +1,50 @@
+---
+title: Configurar Geyser
+description: Geyser permite a los usuarios de Bedrock jugar en el mismo servidor que los jugadores de la edición Java. Esta guía te muestra paso a paso cómo configurar Geyser en un servidor Paper alojado en Seedloaf.
+---
+
+### Mira este video de 1 minuto para realizar la configuración
+
+<iframe
+src="https://player.mux.com/Ix4VorgJJEbUWau01mIQNy7djyb4B02QHmj01yuSB9STtc?metadata-video-title=Geyser-Setup&video-title=Geyser-Setup"
+style="width: 100%; border: none; aspect-ratio: 83/54;" 
+allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" 
+allowfullscreen
+></iframe>
+
+### Paso 1: Elegir el servidor correcto
+
+Geyser [es compatible con Forge](https://geysermc.org/wiki/geyser/setup?platform=modded-servers&host=provider),
+pero generalmente se recomienda utilizar Paper o Spigot al ejecutar un servidor con Geyser. El resto de esta
+guía se mostrará utilizando un servidor Paper alojado en Seedloaf.
+
+### Paso 2: Descargar los plugins
+
+Por lo general, hay 3 plugins que deberías instalar:
+
+1. El plugin Geyser propiamente dicho: este es el que realmente permite que los jugadores de Bedrock se conecten.
+1. Floodgate: permite a los usuarios de Bedrock conectarse sin necesidad de tener una cuenta de la edición Java.
+1. ViaVersion: permite que los clientes con versiones más recientes se conecten a tu servidor.
+
+Para descargar Geyser y Floodgate, [visita esta página](https://geysermc.org/download)
+y descarga las versiones correctas.<br />
+Para descargar ViaVersion, [visita esta página](https://viaversion.com/) y selecciona "ViaVersion".
+
+Una vez que hayas descargado los plugins, súbelos a la carpeta "plugins" en tu panel de control y, a continuación, ¡inicia el servidor para que los plugins puedan cargarse! ### Paso 3: Configuración del plugin y del servidor
+
+1. Localiza el archivo <code>config.yml</code> de Geyser y cambia "auth-type" a <code>"floodgate"</code>. Esto permite que los jugadores de Bedrock se unan correctamente.
+1. A continuación, busca tu archivo <code>server.properties</code> y cambia "enforce-secure-profile" a <code>false</code>.
+
+Guarda los cambios y reinicia el servidor para que las modificaciones surtan efecto.
+
+### Paso 4: Exposición del puerto correcto
+
+En tu Panel de control de Seedloaf, haz clic en "Manage World" (Gestionar mundo) y luego dirígete a la pestaña "Additional Ports" (Puertos adicionales).
+
+Una vez allí, expón el puerto 19132. Tras guardar la configuración, deberías ver un texto que indica:
+<code>"Port 19132 is exposed on nsXYZ.seedloaf.com:YOUR_PORT"</code>. ¡Para conectarte desde Bedrock,
+debes utilizar esa dirección y ese puerto!
+
+### Paso 5: ¡A divertirse!
+
+Tu servidor ya debería estar listo para aceptar jugadores de Bedrock. ¡Que lo disfrutes!

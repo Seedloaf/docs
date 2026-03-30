@@ -10,4 +10,5 @@ const documentation = defineCollection({
 
 export const collections = {
   docs: documentation,
+  "docs-es": documentation,
 };

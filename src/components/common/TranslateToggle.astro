@@ -1,0 +1,91 @@
+<div class="dropdown dropdown-end">
+  <button tabindex="0" class="btn btn-sm btn-ghost btn-square" aria-label="Language">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current" viewBox="0 0 16 16">
+      <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z"/>
+      <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31"/>
+    </svg>
+  </button>
+  <ul tabindex="0" class="menu menu-compact dropdown-content mt-2 p-2 shadow bg-base-100 rounded-box w-40" style="border: 1px solid #5e5bf7;">
+    <li><a id="lang-en" class="justify-between">English</a></li>
+    <li><a id="lang-es">Espaniol</a></li>
+  </ul>
+</div>
+
+<script type="module" client:load>
+  const LANG_KEY = 'docsLang';
+  const en = document.getElementById('lang-en');
+  const es = document.getElementById('lang-es');
+
+  function getLangFromPath() {
+    return location.pathname.startsWith('/documentation/es') ? 'es' : 'en';
+  }
+
+  function getInitialLang() {
+    const stored = localStorage.getItem(LANG_KEY);
+    if (stored) return stored;
+    return getLangFromPath();
+  }
+
+  function stripLangPrefix(path) {
+    if (path === '/') return '/';
+    if (path.startsWith('/documentation/es/')) return path.replace(/^\/documentation\/es/, '');
+    if (path === '/documentation/es') return '/';
+    if (path.startsWith('/documentation/')) return path.replace(/^\/documentation/, '');
+    if (path === '/documentation') return '/';
+    if (path.startsWith('/es/')) return path.replace(/^\/es/, '');
+    if (path === '/es') return '/';
+    if (path.startsWith('/en/')) return path.replace(/^\/en/, '');
+    if (path === '/en') return '/';
+    return path;
+  }
+
+  function computeNewPath(targetLang) {
+    const pathname = location.pathname;
+    
+    // Detect which route pattern we're using
+    const isDocumentation = pathname.startsWith('/documentation');
+    const isHomeLang = pathname.startsWith('/en') || pathname.startsWith('/es');
+    
+    const rest = stripLangPrefix(pathname);
+    
+    if (isDocumentation) {
+      // Navigation within /documentation paths
+      if (targetLang === 'es') {
+        return '/documentation/es' + (rest === '/' ? '/' : rest);
+      }
+      return '/documentation' + (rest === '/' ? '/' : rest);
+    } else if (isHomeLang) {
+      // Navigation within /en or /es paths
+      if (targetLang === 'es') {
+        return '/es' + (rest === '/' ? '/' : rest);
+      }
+      return '/en' + (rest === '/' ? '/' : rest);
+    } else {
+      // Root level pages /[slug]
+      // Default to documentation paths for root navigation
+      if (targetLang === 'es') {
+        return '/documentation/es' + (rest === '/' ? '/' : rest);
+      }
+      return '/documentation' + (rest === '/' ? '/' : rest);
+    }
+  }
+
+  function navigateTo(lang) {
+    try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
+    const newPath = computeNewPath(lang);
+    if (newPath !== location.pathname) {
+      location.pathname = newPath;
+    }
+  }
+
+  const initial = getInitialLang();
+  // visually mark current selection when dropdown is opened
+  function markActive(lang) {
+    if (en) en.classList.toggle('text-primary', lang === 'en');
+    if (es) es.classList.toggle('text-primary', lang === 'es');
+  }
+  markActive(initial);
+
+  if (en) en.addEventListener('click', () => navigateTo('en'));
+  if (es) es.addEventListener('click', () => navigateTo('es'));
+</script>

@@ -1,7 +1,10 @@
 ---
-import SIDEBAR from "../../constants/sidebar";
+import { getSidebar } from "../../constants/sidebar";
 
 const pathname = new URL(Astro.request.url).pathname;
+const langMatch = pathname.match(/^\/documentation\/es(?:\/|$)/);
+const lang = langMatch ? 'es' : 'en';
+const SIDEBAR = getSidebar(lang);
 ---
 
 <div class="drawer-side z-40 md:border-r md:border-base-content/10">
