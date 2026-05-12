@@ -1,0 +1,110 @@
+---
+title: Play Minecraft with friends, natively
+description: Minecraft Java is finally getting a built-in Friends List and peer-to-peer multiplayer. Here's how to use it, and when you'll still want a real server.
+---
+
+
+Mojang first shipped the Friends List and peer-to-peer (P2P) multiplayer in **Java Edition 26.2 Snapshot 7**, with a full release planned for the next major update. It lets you open any single-player world to your friends over the internet without renting a server, paying for Realms, or being on the same Wi-Fi. Just like Bedrock players have had for years.
+
+This guide walks through how to set it up and use it, and provides you with a list of pros and cons - indicating when you might want to use a Seedloaf server instead.
+
+## 1. What you will need
+
+A few things have to be true before any of this works:
+
+- You and your friends are all on **Minecraft: Java Edition**, version 26.2 or newer (currently in snapshot, so back up your worlds before you touch it).
+- Everyone is signed in with a **Microsoft / Xbox account**. 
+- Your Xbox **privacy settings** allow you to add friends and join multiplayer sessions. If you're using a child account, the parent account has to flip those switches first.
+
+If you're not sure about the privacy side, head to your Xbox account settings on the web and check the *Privacy & online safety* section before troubleshooting in-game.
+
+## 2. Adding a friend
+
+The Friends List lives on the **title screen and the pause menu** - there's a new button where the rest of the multiplayer options are.
+
+1. Open the Friends List
+1. Click **Add Friend**
+1. Type your friend's **Minecraft Profile Name** (this is the same name shown above their head in-game)
+1. Send the request
+
+Your friend will see a pending request on their end and can accept or decline.
+
+## 3. Opening a world to your friends
+
+This is the part that replaces the old *Open to LAN* button. From inside a single-player world:
+
+1. Pause the game
+1. Click **Multiplayer Options** (the renamed LAN screen)
+1. Choose a visibility level:
+    - **Off** — fully private, just you
+    - **Local** — friends on the same network can join (this is the classic LAN behaviour)
+    - **Online** — friends from your Friends List can join over the internet
+1. Confirm — your world is now open
+
+From here you can either **invite specific friends directly**, or wait for them to **request to join**. You'll get a prompt either way and can accept or deny.
+
+### A few things worth knowing:
+
+- The world runs on **your machine**. When you close Minecraft or shut your laptop, the world goes offline and your friends get booted.
+- Performance depends on your hardware *and* your upload speed. P2P is direct between players, so a slow home connection means a laggy session.
+- The host's settings (difficulty, game rules, cheats, etc.) apply to everyone who joins.
+
+## 4. Joining a friend's world
+
+Going the other direction is just as simple:
+
+1. Open your Friends List
+1. Find a friend whose world is open to **Online**
+1. Click **Request to Join** (or accept their invite if they sent one first)
+
+Once they accept, you'll drop straight into their world. No IP, no port, no copy-pasting a string of numbers into the multiplayer screen.
+
+---
+
+## When the native feature is enough
+
+The Friends List is brillaint and it's the right tool for a lot of cases. You probably don't need a server if:
+
+- You're playing **vanilla** Minecraft
+- You're a **small group of players** (2–4 players)
+- You're all online at roughly the same time
+- The host has a modern PC and a good upload speed
+- You don't mind the world only being available when the host is playing
+
+For a quick weeknight session with a couple of friends, this is going to be the easiest option Java has ever had.
+
+## When you'll want a Seedloaf server instead
+
+P2P is great for casual play, but it hits a wall the moment your server gets serious. Here's when you might look for a hosted server:
+
+### You want to play with mods or plugins
+
+The Friends List feature is for **vanilla Java**. The moment you want Fabric, Forge, NeoForge, or a Paper-based server, you're going to need alternative hosting options. Every player has to have the exact same mods installed, and *someone* has to be the source of truth for the modpack and configuration. A [Seedloaf world](https://seedloaf.com/) gives you a dedicated `mods` or `plugins` folder you can drop files into without rebuilding everyone's setup. See [Installing Mods/Plugins](/documentation/installing-mods-or-plugins) for the full walkthrough.
+
+### Your laptop can't carry the world
+
+P2P offloads everything onto the host's machine — CPU, RAM, chunk generation, mob AI, etc. If you have a lower end PC running vanilla Minecraft solo, adding three more players who all want to load new chunks at once is going to be a challenge. A Seedloaf server runs on dedicated hardware so your machine doesn't chug.
+
+### You want the world online when you're not
+
+This is the big one. With P2P, the world is only alive when the host is. Our premium servers are up 24/7, meaning your world stays up on its own schedule.
+
+### You're playing with more than a small group
+
+Once you're past five or six players, P2P starts struggling. Home connections aren't built to upload world data to ten people at once, and the host's machine becomes a bottleneck for everyone. Dedicated hosting is designed to handle this.
+
+### You want Bedrock friends to join
+
+Native P2P is **Java-only**. If you've got friends on Bedrock — Switch, Xbox, PlayStation, phones, the Windows app — they can't join a P2P session. Seedloaf supports [Geyser](/documentation/installing-geyser), which bridges Bedrock players straight into your Java world.
+
+### You want voice chat, backups, file access, or real admin tools
+
+P2P gives you the world and not much else. If you want [Simple Voice Chat](/documentation/simple-voice-chat), automated backups, a console, the ability to upload a [custom world](/documentation/custom-world-upload), [datapacks](/documentation/installing-datapacks), or fine-grained [user roles](/documentation/add-users). Seedloaf gives you access to all of this.
+
+### You hit a sketchy NAT or carrier-grade routing
+
+P2P relies on your two machines being able to talk directly. If you're behind a strict CG-NAT (common on mobile-tethered or some apartment ISPs), the connection can fail, and there's not much you can do about it from inside Minecraft. A Seedloaf server allows everyone to connect reliably.
+
+---
+
+Tl;DR: use the Friends List for casual vanilla sessions with a couple of friends, and spin up a [Seedloaf world](https://seedloaf.com/) the moment you want mods, more players, better hardware, or a world that doesn't disappear when you close your laptop. The two options complement each other - pick whichever fits the session you're trying to run.

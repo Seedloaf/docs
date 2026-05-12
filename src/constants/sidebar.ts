@@ -100,6 +100,7 @@ export function getSidebar(lang = 'en'): SidebarSection[] {
       title: 'Other',
       items: [
         { title: 'How do I play Minecraft with friends?', href: base + '/how-to-play-minecraft-with-friends' },
+        { title: 'Play with friends (native)', href: base + '/play-minecraft-with-friends-natively' },
         { title: 'Contributors', href: base + '/contributors' },
       ],
     },
