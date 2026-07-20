@@ -40,6 +40,7 @@ export function getSidebar(lang = 'en'): SidebarSection[] {
           { title: 'Crea tu primer mundo', href: base + '/create-first-world' },
           { title: 'Entender las pestañas', href: base + '/understand-tabs' },
           { title: 'Agregar usuarios al servidor', href: base + '/add-users' },
+          { title: 'Habilitar Cracked', href: base + '/cracked' },
         ],
       },
       {
@@ -49,12 +50,14 @@ export function getSidebar(lang = 'en'): SidebarSection[] {
           { title: 'Instalar datapacks', href: base + '/installing-datapacks' },
           { title: 'Instalar Geyser', href: base + '/installing-geyser' },
           { title: 'Instalar Simple Voice Chat', href: base + '/simple-voice-chat' },
+          { title: 'Instalar Resource Packs', href: base + '/install-resource-packs' },
         ],
       },
       {
         title: 'Otros',
         items: [
           { title: '¿Cómo juego con amigos?', href: base + '/how-to-play-minecraft-with-friends' },
+          { title: 'Jugar con amigos (de forma nativa)', href: base + '/play-minecraft-with-friends-natively' },
           { title: 'Colaboradores', href: base + '/contributors' },
         ],
       },
@@ -85,6 +88,7 @@ export function getSidebar(lang = 'en'): SidebarSection[] {
         { title: 'Create your first world', href: base + '/create-first-world' },
         { title: 'Understand the Tabs', href: base + '/understand-tabs' },
         { title: 'Add Users to Server', href: base + '/add-users' },
+        { title: 'Enabling Cracked', href: base + '/cracked' },
       ],
     },
     {
@@ -94,6 +98,7 @@ export function getSidebar(lang = 'en'): SidebarSection[] {
         { title: 'Installing datapacks', href: base + '/installing-datapacks' },
         { title: 'Installing Geyser', href: base + '/installing-geyser' },
         { title: 'Installing Simple Voice Chat', href: base + '/simple-voice-chat' },
+        { title: 'Installing Resource Packs', href: base + '/install-resource-packs' },
       ],
     },
     {

@@ -3,7 +3,8 @@ title: Setup Geyser
 description: Geyser allows users on Bedrock to play on the same server as Java Edition players. This guide runs you through setting Geyser up on a Paper server on Seedloaf.
 ---
 
-### Watch this 1 minute video to get set up
+### Watch this 3 minute video to get set up
+*Note: This video is currently outdated so please refer to the written guide! ❤️*
 
 <iframe
   src="https://player.mux.com/Ix4VorgJJEbUWau01mIQNy7djyb4B02QHmj01yuSB9STtc?metadata-video-title=Geyser-Setup&video-title=Geyser-Setup"
@@ -34,18 +35,15 @@ Once you have downloaded the plugins, upload them to the "plugins" file on your 
 
 ### Step 3: Configuring the plugin and server
 
-1. Find geyser's <code>config.yml</code> and change "auth-type" to <code>"floodgate"</code> - This allows bedrock players to join properly.
-1. Next, find your <code>server.properties</code> file and change "enforce-secure-profile" to <code>false</code>
+1. Find geyser's <code>config.yml</code> and change "auth-type" to <code>"floodgate"</code>
+2. While you're in the config file, change "clone-remote-port" to <code>true</code>
+3. Next, find your <code>server.properties</code> file and change "enforce-secure-profile" to <code>false</code> - this allows bedrock players to use the chat
 
 Save your changes and start your server again for the edits to come into effect.
 
-### Step 4: Exposing the correct port
+### Step 4: Connecting through bedrock
+Go to your `console` tab and there you should see your server IP and Port ready to go! Before connecting, make sure to disable any addblockers or VPNs as that tends to cause bugs when joining!
 
-On your Seedloaf Dashboard, click on Manage World and then go to the "Additional Ports" tab.
-
-Once there expose port 19132. Once that is saved, you should see some text saying
-<code>"Port 19132 is exposed on nsXYZ.seedloaf.com:YOUR_PORT"</code>. To connect on bedrock, use the 5 numbers at the end for the port and your primary IP (found on the console tab) as the IP!
-
-### Step 5: Have fun!
+### Step 5: Have fun
 
 Your server should now be ready to accept Bedrock players - enjoy!
