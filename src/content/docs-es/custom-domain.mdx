@@ -1,0 +1,23 @@
+---
+title: Conectar un dominio personalizado
+description: ¡Aprende a conectar tu dominio personalizado a tu Seedloaf!
+---
+### Paso 1: Abre la configuración DNS de tu dominio
+Inicia sesión en tu registrador de dominios o proveedor de DNS (como Cloudflare, Namecheap o GoDaddy) y navega hasta la sección de gestión de DNS de tu dominio.
+
+### Paso 2: Crea un registro CNAME
+Añade un nuevo registro CNAME con los siguientes parámetros:
+* **Tipo:** <code>CNAME</code>
+* **Nombre:** <code>play</code>
+* **Destino:** Tu subdominio de Seedloaf (**no** incluyas el número de puerto ni el símbolo `:`)
+
+### Paso 3: Crea un registro SRV
+Añade un nuevo registro SRV con la siguiente información:
+* **Servicio:** <code>_minecraft</code>
+* **Protocolo:** <code>_tcp</code>
+* **Nombre:** <code>play</code>
+* **Puerto:** El número de puerto de tu Seedloaf
+* **Destino:** La dirección completa de tu nuevo dominio (p. ej., <code>tudominio.com</code>)
+
+### Paso 4: ¡Hecho! ✅
+¡Tu dominio personalizado ya está vinculado! Ten en cuenta que los cambios de DNS pueden tardar unos minutos en propagarse. Una vez actualizado, ¡podrás conectarte a tu servidor usando la dirección de tu nuevo dominio!
