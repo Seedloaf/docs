@@ -10,11 +10,12 @@ Añade un nuevo registro CNAME con los siguientes parámetros:
 * **Tipo:** <code>CNAME</code>
 * **Nombre:** <code>play</code>
 * **Destino:** Tu subdominio de Seedloaf (**no** incluyas el número de puerto ni el símbolo `:`)
+* **Proxy:** Esto deberá desactivarse/deshabilitarse
 
 ### Paso 3: Crea un registro SRV
 Añade un nuevo registro SRV con la siguiente información:
 * **Servicio:** <code>_minecraft</code>
-* **Protocolo:** <code>_tcp</code>
+* **Protocolo:** <code>_tcp</code> (Algunos proveedores de alojamiento web, como Cloudflare, requieren que incluyas el protocolo como parte del campo de nombre).
 * **Nombre:** <code>play</code>
 * **Puerto:** El número de puerto de tu Seedloaf
 * **Destino:** La dirección completa de tu nuevo dominio (p. ej., <code>tudominio.com</code>)

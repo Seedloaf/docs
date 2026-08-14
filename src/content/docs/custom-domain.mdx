@@ -10,11 +10,12 @@ Add a new CNAME record with the following settings:
 * **Type:** <code>CNAME</code>
 * **Name:** <code>play</code>
 * **Target:** Your Seedloaf subdomain (do **not** include the port number or `:`)
+* **Proxy:** This will need to be turned off / disabled
 
 ### Step 3: Create an SRV Record
 Add a new SRV record with the following details:
 * **Service:** <code>_minecraft</code>
-* **Protocol:** <code>_tcp</code>
+* **Protocol:** <code>_tcp</code> (some host like cloudflare require you to put the protocol as part of the name field)
 * **Name:** <code>play</code>
 * **Port:** Your Seedloaf port number
 * **Target:** Your new full domain address (e.g., <code>yourdomain.com</code>)
