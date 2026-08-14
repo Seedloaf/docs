@@ -1,0 +1,31 @@
+---
+title: Conectar un Dominio Personalizado
+description: ¡Aprende cómo conectar tu dominio personalizado a tu Seedloaf!
+---
+### Paso 1: Abre la Configuración DNS de tu Dominio
+Inicia sesión en tu registrador de dominios o proveedor de DNS (como Cloudflare, Namecheap o GoDaddy) y navega hasta la sección de Gestión de DNS (DNS Management) de tu dominio.
+
+### Paso 2: Crea un Registro CNAME
+Añade un nuevo registro CNAME con los siguientes ajustes:
+* **Tipo:** <code>CNAME</code>
+* **Nombre:** <code>play</code> (crea <code>play.tudominio.com</code>)
+* **Destino:** ej. <code>tusubdominio.seedloaf.gg</code> ( **no** incluyas el número de puerto ni `:`)
+* **Proxy:** Debe estar desactivado / deshabilitado
+
+### Paso 3: Crea el Registro SRV
+Dirige el tráfico de Minecraft y el puerto personalizado a tu servidor:
+| Campo | Valor | Notas |
+| :--- | :--- | :--- |
+| **Tipo** | `SRV` | |
+| **Servicio** | `_minecraft` | |
+| **Protocolo** | `_tcp` (o `TCP`) | |
+| **Nombre / Host** | `play` | Usa `@` si quieres que los jugadores se conecten usando solo `tudominio.com` sin `play.` |
+| **Prioridad** | `0` | |
+| **Peso** | `0` | |
+| **Puerto** | `[El Puerto de tu Servidor]` | El puerto numérico asignado en tu panel de control |
+| **Destino** | `play.tudominio.com` | Debe coincidir con el nombre de host CNAME creado en el Paso 2 |
+| **TTL** | `Auto` (o `3600`) | |
+> **Nota para proveedores con un único campo "Nombre":** Si tu registrador no tiene campos separados para Servicio/Protocolo, ingresa `_minecraft._tcp.play` en el campo Nombre/Host.
+
+### Paso 4: ¡Listo! ✅
+¡Tu dominio personalizado ya está vinculado! Ten en cuenta que los cambios de DNS pueden tardar unos minutos en propagarse. Una vez actualizado, ¡podrás conectarte a tu servidor usando tu nuevo dominio!

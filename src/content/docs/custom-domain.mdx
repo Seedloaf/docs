@@ -1,0 +1,31 @@
+---
+title: Connecting a Custom Domain
+description: Learn how to connect your  custom domain to your Seedloaf!
+---
+### Step 1: Open Your Domain DNS Settings
+Log in to your domain registrar or DNS provider (such as Cloudflare, Namecheap, or GoDaddy) and navigate to the DNS Management section for your domain.
+
+### Step 2: Create a CNAME Record
+Add a new CNAME record with the following settings:
+* **Type:** <code>CNAME</code>
+* **Name:** <code>play</code> (creates <code>play.yourdomain.com</code>)
+* **Target:** e.g. <code>yoursubdomain.seedloaf.gg</code> (do **not** include the port number or `:`)
+* **Proxy:** This will need to be turned off / disabled
+
+### Step 3: Create the SRV Record
+Route Minecraft traffic and the custom port to your server:
+| Field | Value | Notes |
+| :--- | :--- | :--- |
+| **Type** | `SRV` | |
+| **Service** | `_minecraft` | |
+| **Protocol** | `_tcp` (or `TCP`) | |
+| **Name / Host** | `play` | Use `@` if you want players to connect using just `yourdomain.com` without `play.` |
+| **Priority** | `0` | |
+| **Weight** | `0` | |
+| **Port** | `[Your Server Port]` | The numeric port assigned in your dashboard |
+| **Target** | `play.yourdomain.com` | Must match the CNAME hostname created in Step 2 |
+| **TTL** | `Auto` (or `3600`) | |
+> **Note for providers with a single "Name" field:** If your registrar does not have separate Service/Protocol fields, enter `_minecraft._tcp.play` in the Name/Host field.
+
+### Step 4: Done ✅
+Your custom domain is now linked! Keep in mind that DNS changes may take a few minutes to propagate. Once updated, you can connect to your server using your new domain!

@@ -32,6 +32,7 @@ export function getSidebar(lang = 'en'): SidebarSection[] {
           { title: 'Problemas comunes', href: base + '/common-issues' },
           { title: 'Propiedades del servidor', href: base + '/server-properties' },
           { title: 'Subir un mundo personalizado', href: base + '/custom-world-upload' },
+          { title: 'Dominios personalizado', href: base + '/custom-domain' },
         ],
       },
       {
@@ -80,6 +81,7 @@ export function getSidebar(lang = 'en'): SidebarSection[] {
         { title: 'Common Issues', href: base + '/common-issues' },
         { title: 'Server Properties', href: base + '/server-properties' },
         { title: 'Uploading a custom world', href: base + '/custom-world-upload' },
+        { title: 'Custom Domains', href: base + '/custom-domain' },
       ],
     },
     {
