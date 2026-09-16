@@ -55,16 +55,24 @@ const features = [
 ---
 
 <div>
-  <h2 class="text-3xl font-bold">Why Seedloaf?</h2>
-  <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+  <p class="eyebrow mb-3">Why Seedloaf</p>
+  <h2 class="text-3xl font-bold tracking-[-0.02em]">Built to actually work.</h2>
+  <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5">
     {
-      features.map(({ Icon, title, description }) => (
-        <div class="relative border border-primary rounded-md px-8 py-6">
-          <div class="p-1 rounded-full absolute left-4 -top-5 bg-base-100 text-primary flex items-center gap-2">
-            <Icon className="h-6 w-6" />
-            <h3 class="text-lg font-semibold">{title}</h3>
+      features.map(({ Icon, title, description, highlight }) => (
+        <div class="group/card sl-card p-5">
+          <div class="flex items-center gap-3">
+            <span class="flex h-9 w-9 items-center justify-center rounded-[var(--radius-selector)] bg-[var(--accent-soft)] text-[var(--accent-hi)]">
+              <Icon className="h-5 w-5" />
+            </span>
+            <h3 class="sl-card-title text-lg font-semibold tracking-[-0.01em]">
+              {title}
+            </h3>
           </div>
-          {description}
+          <p class="mt-4 text-[var(--txt-3)]">{description}</p>
+          <p class="mt-2 text-sm font-medium text-[var(--accent-hi)]">
+            {highlight}
+          </p>
         </div>
       ))
     }

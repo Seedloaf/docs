@@ -4,60 +4,59 @@ import {
   ComputerDesktopIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/outline";
+
+const stats = [
+  { Icon: UserGroupIcon, title: "Registered Users", value: "40,000+" },
+  { Icon: AdjustmentsVerticalIcon, title: "Servers Created", value: "50,000+" },
+  { Icon: ComputerDesktopIcon, title: "Free Hours Played", value: "425,000+" },
+];
 ---
 
-<div id="hero" class="hero min-h-screen py-24 lg:py-28">
+<div
+  id="hero"
+  class="hero min-h-screen py-24 lg:py-28"
+>
   <div
-    class="hero-content flex-col justify-between items-center text-center h-full max-w-(--breakpoint-md)"
+    class="hero-content flex-col justify-between items-center text-center gap-12 h-full max-w-(--breakpoint-md)"
   >
     <div>
-      <h1 class="text-3xl sm:text-5xl md:text-7xl font-bold mb-5">
-        Minecraft Servers Made for the Casual Gamer -{" "}
-        <span class="text-primary">For Free.</span>
+      <p class="eyebrow animate-fade-up mb-5">Free Minecraft Hosting</p>
+      <h1
+        class="font-marketing animate-fade-up animate-delay-100 text-4xl sm:text-6xl md:text-7xl font-bold leading-[1.05] mb-5"
+      >
+        Minecraft servers made<br class="hidden sm:block" /> for the casual gamer
+        — <span class="text-[var(--accent-hi)]">for free.</span>
       </h1>
-      <p class="text-md sm:text-lg md:mb-12 mb-6">
+      <p
+        class="animate-fade-up animate-delay-200 text-md sm:text-lg text-[var(--txt-3)] md:mb-12 mb-6 max-w-xl mx-auto"
+      >
         Launch your own Minecraft server in seconds. Enjoy the game with servers
-        that actually work.{" "}
-        <span class="text-primary">Entirely for free!</span>
+        that actually work. <span class="text-[var(--accent-hi)]"
+          >Entirely for free.</span
+        >
       </p>
       <a
         href={process.env.NEXT_PUBLIC_REGISTER_URL as string}
-        class="btn btn-primary btn-lg"
+        class="btn btn-primary btn-lg animate-fade-up animate-delay-300"
       >
         Play now
       </a>
     </div>
 
-    <div>
-      <div class="stats hidden md:flex shadow-sm">
-        <div class="stat">
-          <div class="stat-figure text-primary">
-            <UserGroupIcon className="inline-block h-8 w-8 stroke-current" />
+    <div
+      class="hidden md:grid grid-cols-3 gap-3 w-full animate-fade-up animate-delay-300"
+    >
+      {
+        stats.map(({ Icon, title, value }) => (
+          <div class="group/card sl-card p-5 text-start">
+            <div class="flex items-center gap-2">
+              <Icon className="h-5 w-5 text-[var(--accent-hi)]" />
+              <span class="eyebrow">{title}</span>
+            </div>
+            <div class="mt-3 text-3xl font-bold tabular-nums">{value}</div>
           </div>
-          <div class="stat-title text-start">Registered Users</div>
-          <div class="stat-value">40,000+</div>
-        </div>
-
-        <div class="stat">
-          <div class="stat-figure text-primary">
-            <AdjustmentsVerticalIcon
-              className="inline-block h-8 w-8 stroke-current"
-            />
-          </div>
-          <div class="stat-title text-start">Servers Created</div>
-          <div class="stat-value">50,000+</div>
-        </div>
-
-        <div class="stat">
-          <div class="stat-figure text-primary">
-            <ComputerDesktopIcon
-              className="inline-block h-8 w-8 stroke-current"
-            />
-          </div>
-          <div class="stat-title text-start">Free Hours Played</div>
-          <div class="stat-value">425,000+</div>
-        </div>
-      </div>
+        ))
+      }
     </div>
   </div>
 </div>
