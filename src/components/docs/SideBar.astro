@@ -32,7 +32,7 @@ const SIDEBAR = getSidebar(lang);
       {
         SIDEBAR.map((navItem) => (
           <li>
-            <h2 class="eyebrow px-2 pt-4 pb-1">{navItem.title}</h2>
+            <h2 class="eyebrow px-2 pt-4 pb-1 pointer-events-none">{navItem.title}</h2>
             <ul class="space-y-0.5">
               {navItem.items.map((navItem) => {
                 const active = pathname === navItem.href;
