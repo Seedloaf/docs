@@ -24,39 +24,32 @@
 </button>
 
 <script is:inline>
+  const DARK = "seedloaf-dark";
+  const LIGHT = "seedloaf-light";
+
+  // Migrate the old winter/dark values to the Seedloaf themes.
+  const stored = localStorage.getItem("theme");
   const theme = (() => {
-    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
-      return localStorage.getItem("theme");
-    }
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      return "dark";
-    }
-    return "winter";
+    if (stored === LIGHT || stored === "winter") return LIGHT;
+    if (stored === DARK || stored === "dark") return DARK;
+    if (window.matchMedia("(prefers-color-scheme: light)").matches) return LIGHT;
+    return DARK;
   })();
 
-  if (theme === "winter") {
-    document.documentElement.setAttribute("data-theme", "winter");
-    document.getElementById("themeToggle").classList.remove("swap-active");
-  } else {
-    document.documentElement.setAttribute("data-theme", "dark");
-    document.getElementById("themeToggle").classList.add("swap-active");
-  }
-
-  window.localStorage.setItem("theme", theme);
-
-  const handleToggleClick = () => {
-    const element = document.documentElement;
-    const isDark = element.dataset.theme === "dark";
-    localStorage.setItem("theme", isDark ? "winter" : "dark");
-    element.setAttribute("data-theme", isDark ? "winter" : "dark");
-    if (isDark) {
-      document.getElementById("themeToggle").classList.remove("swap-active");
-    } else {
-      document.getElementById("themeToggle").classList.add("swap-active");
-    }
+  const applyTheme = (value) => {
+    document.documentElement.setAttribute("data-theme", value);
+    const toggle = document.getElementById("themeToggle");
+    // swap-off (sun) shows in light, swap-on (moon) shows in dark.
+    toggle.classList.toggle("swap-active", value === DARK);
   };
 
-  document
-    .getElementById("themeToggle")
-    .addEventListener("click", handleToggleClick);
+  applyTheme(theme);
+  localStorage.setItem("theme", theme);
+
+  document.getElementById("themeToggle").addEventListener("click", () => {
+    const next =
+      document.documentElement.dataset.theme === DARK ? LIGHT : DARK;
+    applyTheme(next);
+    localStorage.setItem("theme", next);
+  });
 </script>

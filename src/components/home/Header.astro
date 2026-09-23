@@ -18,7 +18,7 @@ const pathname = new URL(Astro.request.url).pathname;
 
 <header class="sticky top-0 z-30">
   <nav
-    class="navbar bg-base-100/80 border-b border-base-content/10 backdrop-blur-3xl justify-center items-center py-2 sm:px-0 md:px-20 font-outfit"
+    class="navbar bg-base-100/80 border-b border-[var(--line)] backdrop-blur-3xl justify-center items-center py-2 sm:px-0 md:px-20"
   >
     <div class="dropdown">
       <div
@@ -41,13 +41,13 @@ const pathname = new URL(Astro.request.url).pathname;
       </div>
       <ul
         tabindex="0"
-        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-base-200 border border-[var(--line)] rounded-[var(--radius-box)] w-52"
       >
         {
           navigation.map((item) => (
             <li>
               <a
-                class={`hover:text-primary hover:bg-primary/5 transition flex ${pathname === item.href ? "text-primary bg-primary/5" : ""}`}
+                class={`rounded-[var(--radius-selector)] transition-colors flex ${pathname === item.href ? "bg-[var(--accent-soft)] text-[var(--accent-hi)] font-semibold" : "hover:bg-base-300"}`}
                 href={item.href}
               >
                 {item.title}
@@ -58,27 +58,32 @@ const pathname = new URL(Astro.request.url).pathname;
       </ul>
     </div>
     <div class="navbar-start">
-      <div class="flex items-center">
+      <div class="flex items-center gap-3">
         <img
-          src="/documentation/images/logo.webp"
+          src="/documentation/images/Icon_A.svg"
           alt="Seedloaf"
-          height={64}
-          width={64}
+          height={30}
+          width={31}
+          class="shrink-0"
         />
-        <h3 class="text-xl font-press-start-2p"><a href="/">Seedloaf</a></h3>
-        <span class="uppercase text-primary self-start text-xs font-bold mt-3">
+        <h3 class="text-[21px] font-bold tracking-[-0.025em]">
+          <a href="/">Seedloaf</a>
+        </h3>
+        <span
+          class="eyebrow text-[var(--accent-hi)] self-start text-[11px] mt-2 ml-1"
+        >
           Beta
         </span>
       </div>
     </div>
 
     <div class="navbar-center hidden lg:flex">
-      <ul class="menu menu-horizontal text-base font-medium">
+      <ul class="menu menu-horizontal text-base font-medium gap-1">
         {
           navigation.map((item) => (
             <li>
               <a
-                class={`hover:text-primary hover:bg-primary/5 transition flex ${pathname === item.href ? "text-primary bg-primary/5" : ""}`}
+                class={`rounded-[var(--radius-selector)] transition-colors flex ${pathname === item.href ? "bg-[var(--accent-soft)] text-[var(--accent-hi)] font-semibold" : "text-[var(--txt-3)] hover:bg-base-300 hover:text-base-content"}`}
                 href={item.href}
               >
                 {item.title}

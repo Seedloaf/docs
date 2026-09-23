@@ -1,15 +1,25 @@
 <footer
-  class="footer footer-center bg-base-100 text-primary-content rounded-sm p-2"
+  class="footer footer-center bg-base-200 text-base-content border-t border-[var(--line)] p-6"
 >
-  <div class="max-w-(--breakpoint-xl) flex justify-between items-center w-full">
-    <aside class="hidden md:flex items-center gap-2">
-      <img src="/documentation/images/logo.webp" alt="Seedloaf" height={64} width={64} />
+  <div
+    class="max-w-(--breakpoint-xl) flex flex-col md:flex-row gap-4 justify-between items-center w-full"
+  >
+    <aside class="flex items-center gap-3">
+      <img
+        src="/documentation/images/Icon_A.svg"
+        alt="Seedloaf"
+        height={30}
+        width={31}
+        class="shrink-0"
+      />
       <div class="text-start">
-        <p class="font-bold">Seedloaf.</p>
-        <p>Copyright © 2025 - All right reserved</p>
+        <p class="font-bold tracking-[-0.025em]">Seedloaf.</p>
+        <p class="text-sm text-[var(--txt-4)]">
+          Copyright © 2025 — All rights reserved
+        </p>
       </div>
     </aside>
-    <nav class="grid grid-flow-col gap-4">
+    <nav class="grid grid-flow-col gap-4 text-[var(--txt-3)]">
       <a href="/privacy-policy" class="link link-hover"> Privacy Policy </a>
       <a href="/terms-of-service" class="link link-hover">
         Terms & Conditions
