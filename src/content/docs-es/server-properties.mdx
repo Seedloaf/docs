@@ -1,12 +1,21 @@
 ---
 title: Diferentes propiedades del servidor
-description: >
-  Hay dos formas de editar las propiedades de mi servidor: mediante la
-  pestaña y mediante el archivo. ¿Cuál debo utilizar y por qué?
+description: Hay dos formas de editar las propiedades de mi servidor - la pestaña y el archivo. ¿Cuál debo usar y por qué?
 ---
 
-Cuando desee actualizar las propiedades de su servidor, eche un vistazo primero a la pestaña **Propiedades del servidor**. Esta pestaña contiene las propiedades que hemos hecho fácilmente editables desde el panel de control. Las propiedades que se encuentran disponibles aquí **SOBREESCRIBIRÁN** esa misma propiedad si esta hubiera sido modificada en su archivo `server.properties` dentro del Gestor de archivos.
+Cuando quieras actualizar las propiedades de tu servidor, echa un vistazo primero a la sección
+Propiedades del servidor (Server Properties) dentro de la pestaña de configuración. Esta sección contiene las propiedades que hemos hecho
+fácilmente editables desde el panel de control. Las propiedades disponibles aquí
+**SOBRESCRIBIRÁN** sus respectivas configuraciones dentro del archivo en cada reinicio.
 
-Por ejemplo: si la propiedad 'difficulty' (dificultad) está configurada en "Hard" (Difícil) en la pestaña Propiedades del servidor, pero está configurada en "Normal" dentro de su archivo `server.properties` en el Gestor de archivos, al iniciar el servidor, su mundo se establecerá en la dificultad "Hard". Los valores de la pestaña Propiedades del servidor habrán sobreescrito los valores de su archivo `server.properties`.
+Por ejemplo, si tu 'dificultad' está configurada en Difícil (Hard) en Propiedades del servidor y
+está configurada en Normal dentro de tu archivo server.properties en el Gestor de archivos, al
+iniciar el servidor, tu mundo se establecerá en dificultad Difícil. Los valores de la pestaña
+Propiedades del servidor habrán sobrescrito los valores de tu archivo server.properties.
 
-Para aquellas propiedades que aún no están disponibles en la pestaña Propiedades del servidor, puede configurarlas en el archivo `server.properties` dentro del Gestor de archivos sin riesgo de que sean sobreescritas. En el futuro, nuestro objetivo es lograr una paridad total entre la pestaña Propiedades del servidor y el archivo `server.properties` de su servidor. Hasta que llegue ese momento, configurar el archivo `server.properties` directamente desde el Gestor de archivos es la única solución viable.
+En el caso de las propiedades que aún no estén disponibles en la pestaña Propiedades del servidor, puedes
+configurarlas en el archivo server.properties dentro del Gestor de archivos sin que se
+sobrescriban. En el futuro, pretendemos tener una paridad total entre la pestaña
+Propiedades del servidor y el archivo server.properties de tu servidor. Hasta
+ese momento, configurar server.properties desde el Gestor de archivos es la
+única solución viable.

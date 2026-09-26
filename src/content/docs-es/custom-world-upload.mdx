@@ -1,23 +1,14 @@
 ---
-title: Subir un mundo personalizado
-description: Una guía breve sobre cómo subir un mundo de Minecraft personalizado a Seedloaf.
+title: Cargar un mundo personalizado
+description: Una guía corta sobre cómo cargar un mundo personalizado de Minecraft a Seedloaf.
 ---
 
-Para empezar, cambia el nombre de la carpeta de tu nuevo mundo a `world`. Alternativamente, puedes modificar la propiedad 'level'
-del servidor en el archivo `server.properties` —dentro del **Gestor de Archivos**— para que coincida con el nombre de tu
-mundo personalizado.<br />
+Comienza cambiando el nombre de la carpeta de tu nuevo mundo a `world`. Alternativamente, puedes cambiar la propiedad 'level' del servidor dentro de server.properties en el **Gestor de archivos** para que coincida con el nombre de tu mundo personalizado.<br />
 
-Si tienes la intención de instalar datapacks en el servidor, deberás subirlos a la ruta `world\datapacks`
-(crea la carpeta si no la ves). Cada datapack debe estar en su propia carpeta.<br />
+Si tienes la intención de instalar datapacks en el servidor, tendrás que cargarlos en `world\datapacks` (crea la carpeta si no la ves). Cada datapack debe estar en su propia carpeta.<br />
 
-La forma más sencilla de hacerlo es la siguiente: haz clic derecho en la carpeta del mundo personalizado (en tu ordenador) > *Enviar a* >
-*Carpeta comprimida (en ZIP)*. También puedes utilizar cualquier otra [herramienta de compresión de terceros](https://7-zip.org/download.html)
-para realizar esta tarea (¡nota importante: tus archivos deben estar en formato .zip para que funcionen!).
-Una vez que tengas el archivo ZIP, dirígete al [panel de control de tu servidor en Seedloaf](https://seedloaf.com/dashboard) >
-Gestionar Mundo > Mundo y Copias de Seguridad > Subir Mundo Personalizado. Selecciona el archivo ZIP que acabas de crear y súbelo.
-Espera unos minutos a que se complete la subida, reinicia el servidor... ¡y ya tendrás un mundo totalmente nuevo!
+La forma más fácil de hacer esto es: haz clic derecho en la carpeta del mundo personalizado (en tu computadora) > *enviar a* > *carpeta comprimida en zip*. También puedes usar cualquier otra [herramienta de compresión de terceros](https://7-zip.org/download.html) para hacer esto (¡ten en cuenta que tus archivos deben ser `.zip` para funcionar!). 
+Una vez que tengas el archivo zip, ve a tu [panel del servidor en Seedloaf](https://seedloaf.com/dashboard), haz clic en la pestaña "Archivos" y desplázate hacia abajo pasando los archivos hasta ver la sección "Cargar mundo". Selecciona el archivo zip recién creado y cárgalo. 
+Dale unos minutos para cargarse, reinicia el servidor y ¡tendrás un mundo totalmente nuevo!
 
-Seedloaf cuenta con un límite máximo de almacenamiento establecido en 6 GB; por lo tanto, antes de comenzar la subida, asegúrate de que el archivo del mundo
-ocupe menos de 6 gigabytes. Si supera los 6 GB, puedes utilizar [MCA Selector](https://github.com/Querz/mcaselector)
-para eliminar los *chunks* (fragmentos de terreno) que no se estén utilizando. *Los inventarios de los jugadores no se verán afectados por este cambio, aunque serán
-teletransportados al punto de aparición (*spawn point*) del nuevo mundo.*
+Seedloaf tiene un límite máximo de almacenamiento establecido en 6 GB, por lo que antes de comenzar a cargar, asegúrate de que el archivo del mundo ocupe menos de 6 gigabytes. Si pesa más de 6 GB, puedes usar [MCA selector](https://github.com/Querz/mcaselector) para recortar los chunks no utilizados. *El inventario de los jugadores no se verá afectado por este cambio, aunque serán teletransportados al punto de reaparición (spawn) del nuevo mundo.*
