@@ -1,24 +1,18 @@
 ---
-title: Problemas Comunes
-description: Una lista de errores frecuentes causados por configuraciones incorrectas del usuario o problemas conocidos en Seedloaf.
+title: Problemas comunes
+description: Una lista de errores comunes que se deben a fallos del usuario o a un error conocido en Seedloaf.
 ---
 
-- **La subida del mundo personalizado no funciona** <br />
-El problema más habitual al subir un mundo personalizado es que **el mundo puede tener un nombre diferente al esperado**. Para solucionarlo, actualiza la propiedad level-name dentro de server.properties en el Administrador de Archivos para que coincida con el nombre correcto (en lugar del valor predeterminado 'world').
+- **La carga de un mundo personalizado no funciona** <br />
+El problema más común al cargar un mundo personalizado es que **el mundo personalizado puede tener un nombre modificado**. Para solucionarlo, actualiza la propiedad level-name dentro de server.properties en el Gestor de archivos con el nombre correcto (en lugar del nombre por defecto 'world').
 
-- **Mi servidor no arranca después de instalar mods**<br />
-Existen dos causas principales para esto:<br />
-    1. **Incompatibilidades entre mods:**<br />
-    Cada versión de Minecraft tiene su propia estructura de código y APIs particulares. Un mod creado para una versión puede
-    no funcionar en otra. Incluso si un *único* mod está diseñado para una versión distinta a la que ejecuta tu servidor,
-    puede impedir que el servidor **entero** arranque.<br />
-    **Para solucionarlo:** verifica que las versiones de todos tus mods coincidan exactamente con la versión de Minecraft que está
-    ejecutando tu servidor, y que estén pensados para funcionar con el mismo cargador de mods.<br />
-    1. **Dependencias faltantes**<br />
-    Ciertos mods requieren otros mods o bibliotecas específicas para funcionar correctamente. Los errores de dependencias faltantes
-    aparecen cuando esos archivos de soporte no están instalados en tu servidor.
-    **Para solucionarlo:** revisa tus registros en Registros del Mundo tras un fallo. Verás algo similar a
-    *missing dependencies* junto al nombre de la dependencia ausente.
+- **Mi servidor no inicia después de instalar mods**<br />
+Hay dos causas principales para esto:<br />
+    1. **Incompatibilidad de mods:**<br />
+    Cada versión de Minecraft tiene estructuras de código y APIs específicas. Un mod diseñado para una versión puede no funcionar en otra. Incluso si un *único* mod está hecho para una versión distinta a la que ejecuta tu servidor, puede evitar que **todo** el servidor se inicie.<br /> 
+    **Para solucionarlo:** comprueba de nuevo que la versión de todos los mods coincida con la versión exacta de Minecraft que ejecuta tu servidor y que estén diseñados para funcionar con el mismo cargador de mods (mod loader).<br />
+    1. **Falta de dependencias**<br />
+    Ciertos mods dependen de otros mods o librerías específicas para funcionar, y los errores de dependencias faltantes ocurren cuando esos archivos de soporte no se han instalado en tu servidor. 
+    **Para solucionarlo:** Revisa tus registros en Registros del mundo (World Logs) después de una caída del servidor. Indicará algo similar a *missing dependencies* (dependencias faltantes) junto con el nombre de la dependencia que falta.
 
-    Si no logras identificar la causa, puedes intentar buscar el error en línea, consultarlo con un chatbot de IA,
-    o abrir un ticket en [nuestro Discord](https://seedloaf.com/discord).
+    Si no logras identificar la causa, puedes intentar buscar tu error en internet, consultarlo con un chatbot de IA o crear un ticket en [nuestro Discord](https://discord.com/invite/6KDkhVv8fG).

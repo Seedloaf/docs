@@ -1,9 +1,9 @@
 ---
-title: Configuración de Geyser
+title: Configurar Geyser
 description: Geyser permite a los usuarios de Bedrock jugar en el mismo servidor que los jugadores de Java Edition. Esta guía te explica cómo configurar Geyser en un servidor Paper en Seedloaf.
 ---
 
-### Mira este video de 2 minutos para realizar la configuración
+### Mira este video de 2 minutos para configurarlo
 
 <iframe
   src="https://player.mux.com/9g3x1jdq8c4Zz3jVEjLp1PyvY4SMbiYh602UJ48iy58Y"
@@ -15,32 +15,34 @@ description: Geyser permite a los usuarios de Bedrock jugar en el mismo servidor
 ### Paso 1: Elegir el servidor correcto
 
 Geyser [es compatible con Forge](https://geysermc.org/wiki/geyser/setup?platform=modded-servers&host=provider),
-pero generalmente se recomienda utilizar Paper o Spigot al ejecutar un servidor con Geyser. El resto de esta
-guía se basará en el uso de un servidor Paper en Seedloaf.
+pero generalmente se recomienda usar Paper/Spigot al ejecutar un servidor con Geyser. El resto de esta
+guía se mostrará utilizando un servidor Paper en Seedloaf.
 
 ### Paso 2: Descargar los plugins
 
 Por lo general, hay 3 plugins que deberías instalar:
 
-1. El plugin Geyser propiamente dicho: es el que realmente permite conectarse a los jugadores de Bedrock.
-1. Floodgate: permite a los usuarios de Bedrock conectarse sin necesidad de una cuenta de Java Edition.
-1. ViaVersion: permite que clientes con versiones más recientes se conecten a tu servidor.
+1. El propio plugin de Geyser: esto es lo que realmente permite a los jugadores de Bedrock conectarse.
+1. Floodgate: esto permite que los usuarios de Bedrock se conecten sin necesidad de tener una cuenta de Java Edition.
+1. ViaVersion: esto permite que clientes con versiones más recientes se conecten a tu servidor.
 
 Para descargar Geyser y Floodgate, [visita esta página](https://geysermc.org/download)
 y descarga las versiones correctas.<br />
 Para descargar ViaVersion, [visita esta página](https://viaversion.com/) y selecciona "ViaVersion".
 
-Una vez descargados los plugins, súbelos a la carpeta "plugins" desde tu panel de control e inicia el servidor para que los plugins puedan cargarse. ### Paso 3: Configuración del plugin y del servidor
+Una vez que hayas descargado los plugins, cárgalos en la carpeta "plugins" en tu panel de control y luego ¡inicia el servidor para que los plugins se carguen!
 
-1. Localiza el archivo `config.yml` de Geyser y cambia "auth-type" a `floodgate`.
-2. Aprovechando que estás en el archivo de configuración, cambia "clone-remote-port" a `true`.
-3. A continuación, busca el archivo `server.properties` y cambia "enforce-secure-profile" a `false`; esto permite que los jugadores de Bedrock utilicen el chat.
+### Paso 3: Configurar el plugin y el servidor
 
-Guarda los cambios y reinicia el servidor para que las modificaciones surtan efecto.
+1. Busca el archivo <code>config.yml</code> de Geyser y cambia "auth-type" a <code>"floodgate"</code>.
+2. Mientras estás en el archivo de configuración, cambia "clone-remote-port" a <code>true</code>.
+3. A continuación, busca tu archivo <code>server.properties</code> y cambia "enforce-secure-profile" a <code>false</code>; esto permite que los jugadores de Bedrock puedan usar el chat.
 
-### Paso 4: Conexión a través de Bedrock
-Ve a la pestaña de la consola (`console`); allí deberías ver la dirección IP y el puerto de tu servidor listos para usar. Antes de conectarte, asegúrate de desactivar cualquier bloqueador de anuncios o VPN, ya que suelen causar errores al intentar unirse.
+Guarda tus cambios y vuelve a iniciar tu servidor para que las modificaciones surtan efecto.
+
+### Paso 4: Conectarse a través de Bedrock
+Ve a tu pestaña de `consola` (console) y allí verás la IP de tu servidor y el puerto listos para usar. Antes de conectarte, asegúrate de desactivar cualquier bloqueador de anuncios o VPN, ya que suelen causar fallos al unirse.
 
 ### Paso 5: ¡Diviértete!
 
-Tu servidor ya debería estar listo para aceptar jugadores de Bedrock. ¡Que lo disfrutes!
+Tu servidor ya debería estar listo para recibir a jugadores de Bedrock. ¡Que lo disfrutes!
