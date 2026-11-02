@@ -1,48 +1,45 @@
 ---
-title: Configurar Geyser
+title: Configuración de Geyser
 description: Geyser permite a los usuarios de Bedrock jugar en el mismo servidor que los jugadores de Java Edition. Esta guía te explica cómo configurar Geyser en un servidor Paper en Seedloaf.
 ---
 
-### Mira este video de 2 minutos para configurarlo
+{/* ### Watch this 2 minute video to get set up (outdated)
 
 <iframe
   src="https://player.mux.com/9g3x1jdq8c4Zz3jVEjLp1PyvY4SMbiYh602UJ48iy58Y"
   style="width: 100%; border: none; aspect-ratio: 16/9;"
   allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
   allowfullscreen
-></iframe>
+></iframe> */}
 
 ### Paso 1: Elegir el servidor correcto
 
-Geyser [es compatible con Forge](https://geysermc.org/wiki/geyser/setup?platform=modded-servers&host=provider),
-pero generalmente se recomienda usar Paper/Spigot al ejecutar un servidor con Geyser. El resto de esta
-guía se mostrará utilizando un servidor Paper en Seedloaf.
+Geyser [es compatible con Forge](https://geysermc.org/wiki/geyser/setup?platform=modded-servers&host=provider), pero por lo general se recomienda usar Paper/Spigot al ejecutar un servidor con Geyser. El resto de esta guía se mostrará utilizando un servidor Paper en Seedloaf.
 
 ### Paso 2: Descargar los plugins
 
-Por lo general, hay 3 plugins que deberías instalar:
+Generalmente, hay 3 plugins que deberías instalar:
 
-1. El propio plugin de Geyser: esto es lo que realmente permite a los jugadores de Bedrock conectarse.
-1. Floodgate: esto permite que los usuarios de Bedrock se conecten sin necesidad de tener una cuenta de Java Edition.
-1. ViaVersion: esto permite que clientes con versiones más recientes se conecten a tu servidor.
+1. El plugin de Geyser en sí: es lo que realmente permite la conexión de los jugadores de Bedrock.
+2. Floodgate: permite que los usuarios de Bedrock se conecten sin necesidad de tener una cuenta de Java Edition.
+3. ViaVersion: permite que clientes con versiones más recientes se conecten a tu servidor.
 
-Para descargar Geyser y Floodgate, [visita esta página](https://geysermc.org/download)
-y descarga las versiones correctas.<br />
+Para descargar Geyser y Floodgate, [visita esta página](https://geysermc.org/download) y descarga las versiones correspondientes.<br />
 Para descargar ViaVersion, [visita esta página](https://viaversion.com/) y selecciona "ViaVersion".
 
-Una vez que hayas descargado los plugins, cárgalos en la carpeta "plugins" en tu panel de control y luego ¡inicia el servidor para que los plugins se carguen!
+Una vez descargados los plugins, súbelos a la carpeta "plugins" en tu panel de control y ¡inicia el servidor para que se carguen!
 
 ### Paso 3: Configurar el plugin y el servidor
 
-1. Busca el archivo <code>config.yml</code> de Geyser y cambia "auth-type" a <code>"floodgate"</code>.
-2. Mientras estás en el archivo de configuración, cambia "clone-remote-port" a <code>true</code>.
+1. Ve a Configuración (Settings), desplázate hasta Puertos Adicionales (Additional Ports) y expón el puerto 19132. Copia la dirección generada (ej. 12345:example.seedloaf.gg).
+2. Una vez que el servidor se inicie, abre la carpeta geyser -> abre config.yml -> y pega la dirección copiada dentro de los corchetes de advertise-addresses: [].
 3. A continuación, busca tu archivo <code>server.properties</code> y cambia "enforce-secure-profile" a <code>false</code>; esto permite que los jugadores de Bedrock puedan usar el chat.
 
-Guarda tus cambios y vuelve a iniciar tu servidor para que las modificaciones surtan efecto.
+Guarda los cambios y vuelve a iniciar tu servidor para que las modificaciones surtan efecto.
 
-### Paso 4: Conectarse a través de Bedrock
-Ve a tu pestaña de `consola` (console) y allí verás la IP de tu servidor y el puerto listos para usar. Antes de conectarte, asegúrate de desactivar cualquier bloqueador de anuncios o VPN, ya que suelen causar fallos al unirse.
+### Paso 4: Conectarse desde Bedrock
+Una vez que tu servidor haya iniciado por completo, los jugadores de Bedrock podrán unirse usando el puerto `19132` y la dirección `TU_IP.seedloaf.gg`.
 
-### Paso 5: ¡Diviértete!
+### Paso 5: ¡A divertirse!
 
 Tu servidor ya debería estar listo para recibir a jugadores de Bedrock. ¡Que lo disfrutes!
