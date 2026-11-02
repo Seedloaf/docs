@@ -3,14 +3,14 @@ title: Setup Geyser
 description: Geyser allows users on Bedrock to play on the same server as Java Edition players. This guide runs you through setting Geyser up on a Paper server on Seedloaf.
 ---
 
-### Watch this 2 minute video to get set up
+{/* ### Watch this 2 minute video to get set up (outdated)
 
 <iframe
   src="https://player.mux.com/9g3x1jdq8c4Zz3jVEjLp1PyvY4SMbiYh602UJ48iy58Y"
   style="width: 100%; border: none; aspect-ratio: 16/9;"
   allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
   allowfullscreen
-></iframe>
+></iframe> */}
 
 ### Step 1: Choosing the correct server
 
@@ -34,14 +34,14 @@ Once you have downloaded the plugins, upload them to the "plugins" file on your 
 
 ### Step 3: Configuring the plugin and server
 
-1. Find geyser's <code>config.yml</code> and change "auth-type" to <code>"floodgate"</code>
-2. While you're in the config file, change "clone-remote-port" to <code>true</code>
+1. Go to Settings, scroll to Additional Ports, and expose port 19132. Copy the generated address (e.g., 12345:example.seedloaf.gg).
+2. Once the server starts, open the geyser folder -> open config.yml -> and paste your copied address inside the advertise-addresses: [] brackets.
 3. Next, find your <code>server.properties</code> file and change "enforce-secure-profile" to <code>false</code> - this allows bedrock players to use the chat
 
 Save your changes and start your server again for the edits to come into effect.
 
 ### Step 4: Connecting through bedrock
-Go to your `console` tab and there you should see your server IP and Port ready to go! Before connecting, make sure to disable any addblockers or VPNs as that tends to cause bugs when joining!
+Once your server has fully started, bedrock players can join with the port of `19132` and `YOUR_IP.seedloaf.gg`!
 
 ### Step 5: Have fun
 
